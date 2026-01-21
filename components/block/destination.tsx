@@ -1,7 +1,7 @@
 import React from "react";
 
 const Destination = () => {
-  return <div>Destination page</div>;
+  return <div></div>;
 };
 
 export default Destination;
