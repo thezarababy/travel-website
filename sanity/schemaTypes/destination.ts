@@ -33,7 +33,7 @@ export const destination = defineType({
       name: "content",
       title: "Content",
       description: "Main destination article",
-      type: "blockContent",
+      type: "content",
       validation: (Rule) => Rule.required(),
     },
 
