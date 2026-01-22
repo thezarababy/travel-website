@@ -5,9 +5,14 @@ const Home = () => {
     <div>
       <Header
         bgImg="/homeBG.png"
-        text="THE COUNTER: 70 Countries • 1036 Cities"
+        text={
+          <>
+            THE COUNTER:{" "}
+            <span className="text-[#FFA500] font-semibold">70</span> Countries •{" "}
+            <span className="text-[#FFA500] font-semibold">1036</span> Cities
+          </>
+        }
         title="Leave your mark all over the world"
-        subtitle="Travel, explore, and discover unforgettable places"
         button="Read More"
       />
     </div>
