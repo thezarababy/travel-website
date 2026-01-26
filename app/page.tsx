@@ -2,6 +2,7 @@ import DestinationCard from "@/components/reuseable/destination-card";
 import Header from "@/components/reuseable/header";
 import ScrollButton from "@/components/reuseable/scroll-button";
 import Button from "@/components/reuseable/button";
+import PostCard from "@/components/reuseable/post-card";
 
 const Home = () => {
   return (
@@ -58,11 +59,13 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
         <Button label="Read More" bgColor="#0336FF" textColor="white" />
       </div>
       <div
-        className="w-[450.23px] h-[569px] px-9 mt-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+        className="w-[450.23px] h-120 px-12 my-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
 transition-all duration-300 hover:-translate-y-1
 hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
       >
-        <h1 className="text-2xl font-bold text-center py-6">Categories</h1>
+        <h1 className="text-2xl font-bold text-center pt-6 pb-12">
+          Categories
+        </h1>
         <div className="flex justify-between items-center mb-5">
           <h3>Europe</h3>
           <p>(11)</p>
@@ -91,6 +94,17 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
           <h3>Other</h3>
           <p>(11)</p>
         </div>
+      </div>
+      <div className="px-10 py-6 shadow-md">
+        <h1 className="font-bold text-2xl">Popular Post</h1>
+      </div>
+      <div className="w-112.25 h-126.75">
+        <PostCard
+          image="/bus2.png"
+          date="September 17, 2018"
+          category=" - Tips & Tricks"
+          title="Finding Love & home in Tbilisi, Georgia"
+        />
       </div>
       <div>
         <DestinationCard
