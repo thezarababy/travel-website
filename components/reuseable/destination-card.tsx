@@ -4,6 +4,7 @@ type DestinationCardProps = {
   image: string;
   title: string;
   date: string;
+  exerpt: string;
   category?: string;
   location: string;
   commentsCount?: number;
@@ -13,6 +14,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   image,
   title,
   date,
+  exerpt,
   category = "Tips & Tricks",
   location,
   commentsCount = 0,
@@ -24,28 +26,31 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
       </div>
 
       <div className="p-4 space-y-3">
-        <img
-          src="/rectangle.png"
-          alt="rectangle"
-          className="w-[2.89px] h-[23.6px]"
-        />
-        <p className="text-sm text-gray-500">
-          {date} – {category}
-        </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="/rectangle.png"
+            alt="rectangle"
+            className="w-[2.89px] h-[23.6px]"
+          />
+          <p className="text-sm text-gray-500">
+            {date} – {category}
+          </p>
+        </div>
 
         <h3 className="text-lg font-semibold leading-snug">{title}</h3>
+        <p className=" text-sm">{exerpt}</p>
 
         <div className="flex items-center justify-between text-sm text-gray-500 pt-2">
-          <div>
+          <div className="flex gap-3 items-center">
             <img
               src="/location.png"
               alt="Location"
               className="w-[18.75px] h-6.5"
             />
-            <span className="flex items-center gap-1">{location}</span>
+            <span className="flex items-center gap-3">{location}</span>
           </div>
 
-          <div>
+          <div className="flex items-center gap-3">
             <img src="/comment.png" alt="Comments" className="w-5.75 h-4" />
             <span className="flex items-center gap-1">
               Comment ({commentsCount})
