@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="max-w-[360]"> {children} </main>
+        <main className=""> {children} </main>
 
         <Footer />
       </body>

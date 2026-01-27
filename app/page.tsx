@@ -3,6 +3,7 @@ import Header from "@/components/reuseable/header";
 import ScrollButton from "@/components/reuseable/scroll-button";
 import Button from "@/components/reuseable/button";
 import PostCard from "@/components/reuseable/post-card";
+import RecentPostCard from "@/components/reuseable/RecentPost-card";
 
 const Home = () => {
   return (
@@ -95,17 +96,69 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
           <p>(11)</p>
         </div>
       </div>
-      <div className="px-10 py-6 shadow-md">
-        <h1 className="font-bold text-2xl">Popular Post</h1>
+      <div className="w-112.5 space-y-6 mb-8">
+        <div
+          className="px-10 py-6  mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+transition-all duration-300 hover:-translate-y-1
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
+        >
+          <h1 className="font-bold text-2xl">Popular Post</h1>
+        </div>
+        <div className="">
+          <PostCard
+            image="/bus2.png"
+            date="September 17, 2018"
+            category=" - Tips & Tricks"
+            title="Finding Love & home in Tbilisi, Georgia"
+          />
+        </div>
       </div>
-      <div className="w-112.25 h-126.75">
-        <PostCard
-          image="/bus2.png"
-          date="September 17, 2018"
-          category=" - Tips & Tricks"
-          title="Finding Love & home in Tbilisi, Georgia"
-        />
+
+      <div className="space-y-4 mb-8">
+        <div
+          className="px-10 py-6  mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+transition-all duration-300 hover:-translate-y-1
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
+        >
+          <h1 className="font-bold text-2xl">Recent Posts</h1>
+        </div>
+        <div
+          className="w-112.25  shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        transition-all duration-300 hover:-translate-y-0.5
+        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] "
+        >
+          <RecentPostCard
+            image="/recent-post1.png"
+            title="Finding Love & home in Tbilisi, Georgia"
+            date="September 17, 2018"
+          />
+
+          <RecentPostCard
+            image="/recent-post2.png"
+            title="Finding Love & home in Tbilisi, Georgia"
+            date="September 17, 2018"
+          />
+          <RecentPostCard
+            image="/recent-post2.png"
+            title="Finding Love & home in Tbilisi, Georgia"
+            date="September 17, 2018"
+          />
+        </div>
       </div>
+      <div
+        className=" shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        transition-all duration-300 hover:-translate-y-0.5
+        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] w-112.25 h-70 text-center "
+      >
+        <h1 className="font-bold pb-4 text-lg pt-6">Gear I Use</h1>
+        <h3 className="text-2xl font-bold  pb-4">What’s in My Bag??</h3>
+        <p className="pb-4 w-60 mx-auto text-[#0B0A0A]">
+          Unfortunately, there is no “one-size-fits-all” when it comes to travel
+          packing lists.
+        </p>
+        <Button label="View Details" bgColor="#0336FF" textColor="white" />
+      </div>
+
       <div>
         <DestinationCard
           image="/bus.png"

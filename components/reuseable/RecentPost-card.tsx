@@ -16,16 +16,14 @@ const RecentPostCard: React.FC<RecentPostCardProps> = ({
   return (
     <div
       className="
-        flex gap-4 rounded-xl bg-white p-3
-        shadow-[0_10px_25px_rgba(0,0,0,0.08)]
-        transition-all duration-300 hover:-translate-y-0.5
-        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)]
+        flex gap-4  bg-white p-3
+        
       "
     >
       <img
         src={image}
         alt={title}
-        className="h-16 w-16 rounded-lg object-cover shrink-0"
+        className="h-16 w-16  object-cover shrink-0"
       />
 
       <div className="flex flex-col justify-center">
