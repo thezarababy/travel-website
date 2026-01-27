@@ -205,34 +205,35 @@ transition-all duration-300 hover:-translate-y-1
 hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
         >
           <h1 className="font-bold text-2xl text-center">Get In Touch</h1>
-          <section className="flex items-center gap-10 text-white">
-            <main>
-              <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4">
-                <img src="/facebook.png" alt="" className="w-4 h-4" />
-                <span>65.5K </span>
-
-                <span>Likes</span>
-              </div>
-              <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md">
-                <img src="/youtube.png" alt="" className="w-7 h-5" />
-                <p>1.5 M</p>
-                <p>Subscribers</p>
-              </div>
-            </main>
-            <main>
-              <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md">
-                <img src="/twitter.png" alt="" className="w-7 h-5" />
-                <p>105 k</p>
-                <p>Followers</p>
-              </div>
-              <div className="flex items-center gap-2 bg-[#E14D93] rounded-md">
-                <img src="/instagram.ng" alt="" className="w-7 h-5" />
-                <p>85 k</p>
-                <p>Followers</p>
-              </div>
-            </main>
-          </section>
         </div>
+
+        <section className="flex items-center gap-10 text-white ml-3 mb-6">
+          <main className="">
+            <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4 mb-4">
+              <img src="/facebook.png" alt="" className="w-4 h-4" />
+              <span>65.5K </span>
+
+              <span>Likes</span>
+            </div>
+            <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md p-4">
+              <img src="/youtube.png" alt="" className="w-7 h-5 text-white" />
+              <p>1.5 M</p>
+              <p>Subscribers</p>
+            </div>
+          </main>
+          <main>
+            <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md p-4 mb-4">
+              <img src="/twitter.png" alt="" className="w-7 h-5 " />
+              <p>105 k</p>
+              <p>Followers</p>
+            </div>
+            <div className="flex items-center gap-2 bg-[#E14D93] rounded-md p-4">
+              <img src="/instagram.ng" alt="" className="w-7 h-5 text-white" />
+              <p>85 k</p>
+              <p>Followers</p>
+            </div>
+          </main>
+        </section>
       </div>
 
       <div>
