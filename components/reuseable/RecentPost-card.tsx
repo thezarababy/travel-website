@@ -5,6 +5,7 @@ type RecentPostCardProps = {
   title: string;
   date: string;
   category?: string;
+  price: string;
 };
 
 const RecentPostCard: React.FC<RecentPostCardProps> = ({
@@ -12,6 +13,7 @@ const RecentPostCard: React.FC<RecentPostCardProps> = ({
   title,
   date,
   category = "Tips & Tricks",
+  price,
 }) => {
   return (
     <div
@@ -32,6 +34,12 @@ const RecentPostCard: React.FC<RecentPostCardProps> = ({
         </p>
 
         <h3 className="text-sm font-semibold leading-snug">{title}</h3>
+        <div
+          className="text-[#0336FF]
+]"
+        >
+          {price}
+        </div>
       </div>
     </div>
   );

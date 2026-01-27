@@ -131,24 +131,27 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
             image="/recent-post1.png"
             title="Finding Love & home in Tbilisi, Georgia"
             date="September 17, 2018"
+            price=""
           />
 
           <RecentPostCard
             image="/recent-post2.png"
             title="Finding Love & home in Tbilisi, Georgia"
             date="September 17, 2018"
+            price=""
           />
           <RecentPostCard
             image="/recent-post2.png"
             title="Finding Love & home in Tbilisi, Georgia"
             date="September 17, 2018"
+            price=""
           />
         </div>
       </div>
       <div
         className=" shadow-[0_10px_25px_rgba(0,0,0,0.08)]
         transition-all duration-300 hover:-translate-y-0.5
-        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] w-112.25 h-70 text-center "
+        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] w-112.25 h-70 text-center my-6 "
       >
         <h1 className="font-bold pb-4 text-lg pt-6">Gear I Use</h1>
         <h3 className="text-2xl font-bold  pb-4">What’s in My Bag??</h3>
@@ -157,6 +160,79 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
           packing lists.
         </p>
         <Button label="View Details" bgColor="#0336FF" textColor="white" />
+      </div>
+
+      <div className="space-y-4 mb-8">
+        <div
+          className="px-10 py-6  mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+transition-all duration-300 hover:-translate-y-1
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
+        >
+          <h1 className="font-bold text-2xl">Product That I Have</h1>
+        </div>
+        <div
+          className="w-112.25  shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        transition-all duration-300 hover:-translate-y-0.5
+        hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] "
+        >
+          <RecentPostCard
+            image="/product1
+            .png"
+            title="Apple MacBook Air  MJV2ELL/A 13-inch Laptop "
+            price="$514"
+            date=""
+          />
+
+          <RecentPostCard
+            image="/product2
+            .png"
+            title="Iphone Xs case, Iphone X case, SUPCASE"
+            price="$267"
+            date=""
+          />
+          <RecentPostCard
+            image="/product3.png"
+            title="Master Sport band for Apple wrist watch"
+            price="$378"
+            date=""
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          className="px-10 py-6  mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+transition-all duration-300 hover:-translate-y-1
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
+        >
+          <h1 className="font-bold text-2xl text-center">Get In Touch</h1>
+          <section className="flex items-center gap-10 text-white">
+            <main>
+              <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4">
+                <img src="/facebook.png" alt="" className="w-4 h-4" />
+                <span>65.5K </span>
+
+                <span>Likes</span>
+              </div>
+              <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md">
+                <img src="/youtube.png" alt="" className="w-7 h-5" />
+                <p>1.5 M</p>
+                <p>Subscribers</p>
+              </div>
+            </main>
+            <main>
+              <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md">
+                <img src="/twitter.png" alt="" className="w-7 h-5" />
+                <p>105 k</p>
+                <p>Followers</p>
+              </div>
+              <div className="flex items-center gap-2 bg-[#E14D93] rounded-md">
+                <img src="/instagram.ng" alt="" className="w-7 h-5" />
+                <p>85 k</p>
+                <p>Followers</p>
+              </div>
+            </main>
+          </section>
+        </div>
       </div>
 
       <div>
