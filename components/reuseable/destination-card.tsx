@@ -20,13 +20,13 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   commentsCount = 0,
 }) => {
   return (
-    <article className="w-full max-w-sm bg-white rounded-lg overflow-hidden shadow-md">
+    <article className="w-full  bg-white rounded-md overflow-hidden shadow-md mb-10">
       <div className="h-48 w-full">
         <img src={image} alt={title} className="h-full w-full object-cover" />
       </div>
 
-      <div className="p-4 space-y-3">
-        <div className="flex items-center gap-3">
+      <div className="p-4 space-y-3 h-70">
+        <div className="flex items-center gap-3 ">
           <img
             src="/rectangle.png"
             alt="rectangle"
@@ -37,8 +37,8 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
           </p>
         </div>
 
-        <h3 className="text-lg font-semibold leading-snug">{title}</h3>
-        <p className=" text-sm">{exerpt}</p>
+        <h3 className="text-lg font-semibold leading-snug pt-10 ">{title}</h3>
+        <p className=" text-sm w-130 pt-10">{exerpt}</p>
 
         <div className="flex items-center justify-between text-sm text-gray-500 pt-2">
           <div className="flex gap-3 items-center">

@@ -39,10 +39,10 @@ const Home = () => {
         <img src="/scroll.png" alt="Scroll" className="w-6 h-6" />
       </ScrollButton>
 
-      <main className="flex ">
+      <main className="flex  gap-10 w-360 mx-auto py-20">
         <section>
           <div
-            className="px-8   mt-6 ml-5 flex flex-col items-center  w-[438.23px] h-[598px] shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+            className=" flex flex-col items-center  w-[438.23px] h-150 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
 transition-all duration-300 hover:-translate-y-1
 hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
             id="next-section"
@@ -247,8 +247,8 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
             </section>
           </div>
         </section>
-        <section>
-          <div className="w-[794px]">
+        <section className="w-300 bg-red-600">
+          <div className="">
             <DestinationCard
               image="/bus.png"
               title="Bali, Indonesia"
@@ -259,7 +259,31 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
               commentsCount={12}
             />
           </div>
-          <div className="w-[794px]">
+          <div className=" flex gap-4">
+            <div className=" w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+            <div className="w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+          </div>
+          <div className="">
             <DestinationCard
               image="/bus.png"
               title="Bali, Indonesia"
