@@ -179,7 +179,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
         hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] "
             >
               <RecentPostCard
-                image="/product1
+                image="/macbook
             .png"
                 title="Apple MacBook Air  MJV2ELL/A 13-inch Laptop "
                 price="$514"
@@ -187,7 +187,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
               />
 
               <RecentPostCard
-                image="/product2
+                image="/phone
             .png"
                 title="Iphone Xs case, Iphone X case, SUPCASE"
                 price="$267"
@@ -247,7 +247,11 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
             </section>
           </div>
         </section>
-        <section className="w-300 bg-red-600">
+        <section
+          className="w-300 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+transition-all duration-300 hover:-translate-y-1
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
+        >
           <div className="">
             <DestinationCard
               image="/bus.png"
@@ -293,6 +297,107 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
               location="Bali, Indonesia"
               commentsCount={12}
             />
+          </div>
+          <div
+            className="relative w-full h-100 md:h-125 bg-cover bg-center mb-10"
+            style={{ backgroundImage: "url('/purchase.png')" }}
+          >
+            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+              <h1 className="text-white text-4xl  mb-25 w-175">
+                Want{" "}
+                <span className="text-[#FFA500] underline">me to purchase</span>{" "}
+                something for you that isn't available in your country?
+              </h1>
+
+              <Button
+                label="Place Order "
+                bgColor="#0336FF"
+                textColor="white"
+              />
+            </div>
+          </div>
+          <div className=" flex gap-4">
+            <div className=" w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+            <div className="w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+          </div>
+          <div className=" flex gap-4">
+            <div className=" w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+            <div className="w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+          </div>
+          <div className="">
+            <DestinationCard
+              image="/bus.png"
+              title="Bali, Indonesia"
+              date="2024-05-15"
+              exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
+              category="Tips & Tricks"
+              location="Bali, Indonesia"
+              commentsCount={12}
+            />
+          </div>
+          <div className=" flex gap-4">
+            <div className=" w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
+            <div className="w-125">
+              <DestinationCard
+                image="/bus.png"
+                title="Bali, Indonesia"
+                date="2024-05-15"
+                exerpt=""
+                category="Tips & Tricks"
+                location="Bali, Indonesia"
+                commentsCount={12}
+              />
+            </div>
           </div>
         </section>
       </main>

@@ -21,7 +21,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
 }) => {
   return (
     <article className="w-full  bg-white rounded-md overflow-hidden shadow-md mb-10">
-      <div className="h-48 w-full">
+      <div className="h-full w-full">
         <img src={image} alt={title} className="h-full w-full object-cover" />
       </div>
 
