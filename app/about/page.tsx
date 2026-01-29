@@ -1,4 +1,5 @@
 import Header from "@/components/reuseable/header";
+import Button from "@/components/reuseable/button";
 
 const About = () => {
   return (
@@ -189,6 +190,32 @@ const About = () => {
             <p className="font-bold">Joy Kim</p>
             <p>explorer</p>
           </div>
+        </section>
+        <section className=" flex mt-30">
+          <img src="/one.png" alt="" className="w-52 h-65" />
+          <img src="/two.png" alt="" className="w-52 h-65" />
+          <img src="/three.png" alt="" className="w-52 h-65" />
+          <img src="/four.png" alt="" className="w-52 h-65" />
+          <img src="/five.png" alt="" className="w-52 h-65" />
+          <img src="/six.png" alt="" className="w-52 h-65" />
+          <img src="/seven.png" alt="" className="w-52 h-65" />
+        </section>
+        <section className="flex justify-between my-30">
+          <div>
+            <p className="font-bold text-4xl w-130">
+              Join <span className="text-blue-700">98,641</span> Monthly
+              Readers. Subscribe Today!
+            </p>
+          </div>
+          <form>
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="w-83 h-20 border-2 p-4 mr-5"
+            />
+
+            <Button label="Subscribe" bgColor="#0336FF" textColor="white" />
+          </form>
         </section>
       </main>
     </div>
