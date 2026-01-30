@@ -1,19 +1,13 @@
 type ButtonProps = {
-  bgColor?: string;
-  textColor?: string;
   label: string;
   onClick?: () => void;
 };
 
-const Button = ({ bgColor, textColor, label, onClick }: ButtonProps) => {
+const Button = ({ label, onClick }: ButtonProps) => {
   return (
     <button
-      className="rounded-md px-6 py-3  "
+      className="rounded-md px-6 py-3 text-white bg-[#0336FF] "
       onClick={onClick}
-      style={{
-        backgroundColor: bgColor,
-        color: textColor,
-      }}
     >
       {label}
     </button>

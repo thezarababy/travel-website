@@ -214,7 +214,7 @@ const About = () => {
               className="w-83 h-20 border-2 p-4 mr-5"
             />
 
-            <Button label="Subscribe" bgColor="#0336FF" textColor="white" />
+            <Button label="Subscribe" />
           </form>
         </section>
       </main>
