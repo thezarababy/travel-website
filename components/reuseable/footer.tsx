@@ -1,10 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="max-w-[1440px] mx-auto ">
-      {/* Top Divider */}
+    <footer className=" mx-auto ">
       <hr className="border-t border-[#EEEEEE]" />
 
-      {/* ===== NAV SECTION ===== */}
       <div className="max-w-[1260px] mx-auto px-5">
         <div className="flex justify-between items-center py-6 text-white">
           <img src="/logo.png" alt="Logo" className="w-[133px] h-[55.67px]" />
@@ -14,7 +12,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* ===== MAIN FOOTER CONTENT ===== */}
       <div className="border-t border-[#EEEEEE] bg-[#000000AC] ">
         <div className="max-w-[1260px] mx-auto px-5 py-10 text-[#EEEEEE] leading-[27px] flex justify-between">
           <div className="w-[337px] flex flex-col gap-6">

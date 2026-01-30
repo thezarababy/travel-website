@@ -2,9 +2,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* You can still add your custom global styles here */
 body {
-  font-family: "Inter", sans-serif; /* example */
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 @theme inline {

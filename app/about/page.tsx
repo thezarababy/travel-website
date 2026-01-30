@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Header bgImg="/about.png" text="" title="About Us" button="" />
-      <main className="w-360 mx-auto py-20">
+      <main className=" mx-auto py-20">
         <div className="flex gap-10  items-center w-360 mx-auto ">
           <div>
             <p className="text-4xl">

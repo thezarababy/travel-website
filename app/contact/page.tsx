@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div>
       <Header bgImg="/contact.png" text="" button="" title="Contact" />
-      <main className="w-360 mx-auto py-20">
+      <main className=" py-20">
         <form
           action=" submit
       "

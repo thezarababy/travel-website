@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <Header bgImg="/destination.png" text="" button="" title="Destination" />
-      <main className="w-360 mx-auto py-20">
+      <main className=" py-20">
         <div className="flex justify-between items-center w-360 mx-auto my-20">
           <div>
             <p className="text-6xl w-150">

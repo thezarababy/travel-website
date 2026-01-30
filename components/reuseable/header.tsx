@@ -30,7 +30,9 @@ const Header: React.FC<HeaderProps> = ({
         <p className="text-2xl mb-3">{text}</p>
         <h1 className="text-5xl font-bold mb-3 leading-22.25">{title}</h1>
 
-        <Button label="Read More" bgColor="#0336FF" />
+        <button className="rounded-md px-10 py-5 text-white bg-[#0336FF]">
+          Read More
+        </button>
       </div>
     </header>
   );

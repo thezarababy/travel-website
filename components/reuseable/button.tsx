@@ -6,7 +6,7 @@ type ButtonProps = {
 const Button = ({ label, onClick }: ButtonProps) => {
   return (
     <button
-      className="rounded-md px-6 py-3 text-white bg-[#0336FF] "
+      className="rounded-md px-10 py-5 text-white bg-[#0336FF] "
       onClick={onClick}
     >
       {label}

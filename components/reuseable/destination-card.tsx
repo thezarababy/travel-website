@@ -20,41 +20,38 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   commentsCount = 0,
 }) => {
   return (
-    <article className="w-full  bg-white rounded-md overflow-hidden shadow-md mb-10">
-      <div className="h-full w-full">
-        <img src={image} alt={title} className="h-full w-full object-cover" />
+    <article className="w-full bg-white rounded-md overflow-hidden shadow-md">
+      <div className="relative w-full aspect-video">
+        <img
+          src={image}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
 
-      <div className="p-4 space-y-3 h-70">
-        <div className="flex items-center gap-3 ">
-          <img
-            src="/rectangle.png"
-            alt="rectangle"
-            className="w-[2.89px] h-[23.6px]"
-          />
-          <p className="text-sm text-gray-500">
+      <div className="p-4 space-y-4">
+        <div className="flex items-center gap-3 text-sm text-gray-500">
+          <span className="block w-0.75 h-6 bg-orange-400" />
+          <span>
             {date} – {category}
-          </p>
+          </span>
         </div>
 
-        <h3 className="text-lg font-semibold leading-snug pt-10 ">{title}</h3>
-        <p className=" text-sm w-130 pt-10">{exerpt}</p>
+        <h3 className="text-lg font-semibold leading-snug">{title}</h3>
+
+        {exerpt && (
+          <p className="text-sm text-gray-600 leading-relaxed">{exerpt}</p>
+        )}
 
         <div className="flex items-center justify-between text-sm text-gray-500 pt-2">
-          <div className="flex gap-3 items-center">
-            <img
-              src="/location.png"
-              alt="Location"
-              className="w-[18.75px] h-6.5"
-            />
-            <span className="flex items-center gap-3">{location}</span>
+          <div className="flex items-center gap-2">
+            <img src="/location.png" alt="" className="w-4 h-4" />
+            <span>{location}</span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <img src="/comment.png" alt="Comments" className="w-5.75 h-4" />
-            <span className="flex items-center gap-1">
-              Comment ({commentsCount})
-            </span>
+          <div className="flex items-center gap-2">
+            <img src="/comment.png" alt="" className="w-4 h-4" />
+            <span>({commentsCount})</span>
           </div>
         </div>
       </div>

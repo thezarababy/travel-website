@@ -3,11 +3,10 @@ import Link from "next/link";
 const navbar = () => {
   return (
     <div className=" absolute top-0 left-30 w-full  flex items-center justify-between max-w-[1440px] mx-auto py-8">
-      <div className="w-[133px] h-[55.67px]">
+      <div className="w-33.25 h-[55.67px]">
         <img src="/logo.png" alt="Logo" />
       </div>
 
-      {/* navigation items */}
       <div className="flex gap-10 text-[#FFA500] ">
         <Link
           href="/"

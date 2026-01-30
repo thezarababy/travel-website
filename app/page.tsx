@@ -39,8 +39,8 @@ const Home = () => {
         <img src="/scroll.png" alt="Scroll" className="w-6 h-6" />
       </ScrollButton>
 
-      <main className="flex  gap-10 w-360 mx-auto py-20">
-        <section>
+      <main className=" mx-auto max-w-6xl px-4 py-12 flex flex-col gap-12 lg:flex-row lg:gap-10 ">
+        <section className="w-full lg:flex-[0.9] space-y-10">
           <div
             className=" flex flex-col items-center  w-[438.23px] h-150 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
 transition-all duration-300 hover:-translate-y-1
@@ -60,7 +60,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
               lacus. Nulla amet suscipit sit lectus tortor. Dolor non eget
               suspendisse leo scelerisque sed d.
             </p>
-            <Button label="Read More" bgColor="#0336FF" textColor="white" />
+            <Button label="Read More" />
           </div>
           <div
             className="w-[450.23px] h-120 px-12 my-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
@@ -162,7 +162,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 ]"
               Unfortunately, there is no “one-size-fits-all” when it comes to
               travel packing lists.
             </p>
-            <Button label="View Details" bgColor="#0336FF" textColor="white" />
+            <Button label="View Details" />
           </div>
 
           <div className="space-y-4 mb-8">
@@ -248,9 +248,9 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
           </div>
         </section>
         <section
-          className="w-300 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+          className="w-full lg:flex-[1.1] space-y-10shadow-[0_20px_40px_rgba(0,0,0,0.12)]
 transition-all duration-300 hover:-translate-y-1
-hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
+hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
         >
           <div className="">
             <DestinationCard
@@ -263,7 +263,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
               commentsCount={12}
             />
           </div>
-          <div className=" flex gap-4">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className=" w-125">
               <DestinationCard
                 image="/bus.png"
@@ -299,21 +299,17 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
             />
           </div>
           <div
-            className="relative w-full h-100 md:h-125 bg-cover bg-center mb-10"
+            className="relative w-full bg-cover bg-center py-20"
             style={{ backgroundImage: "url('/purchase.png')" }}
           >
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-              <h1 className="text-white text-4xl  mb-25 w-175">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <h1 className="text-white text-2xl sm:text-4xl mb-6">
                 Want{" "}
                 <span className="text-[#FFA500] underline">me to purchase</span>{" "}
                 something for you that isn't available in your country?
               </h1>
 
-              <Button
-                label="Place Order "
-                bgColor="#0336FF"
-                textColor="white"
-              />
+              <Button label="Place Order " />
             </div>
           </div>
           <div className=" flex gap-4">
