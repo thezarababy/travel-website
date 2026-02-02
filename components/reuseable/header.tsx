@@ -26,11 +26,13 @@ const Header: React.FC<HeaderProps> = ({
       }}
     >
       <Navbar />
-      <div className="text-center max-w-2xl px-4 ">
+      <div className="text-center px-4 ">
         <p className="text-2xl mb-3">{text}</p>
-        <h1 className="text-5xl font-bold mb-3 leading-22.25">{title}</h1>
+        <h1 className="text-5xl w-[60%] font-bold mb-3 leading-15 mx-auto">
+          {title}
+        </h1>
 
-        <button className="rounded-md px-10 py-5 text-white bg-[#0336FF]">
+        <button className="rounded-md px-8 py-5 text-white bg-[#0336FF]">
           Read More
         </button>
       </div>

@@ -20,12 +20,12 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   commentsCount = 0,
 }) => {
   return (
-    <article className="w-[70%] bg-white rounded-md overflow-hidden shadow-md">
-      <div className="relative max-w-[783px] w-full aspect-video">
-        <img src={image} alt={title} className=" w-full h-full object-cover" />
+    <article className=" bg-white rounded-md  shadow-md">
+      <div className="relative max-w-195  ">
+        <img src={image} alt={title} className="object-cover" />
       </div>
 
-      <div className="p-4 space-y-4">
+      <div className="p-4 ">
         <div className="flex items-center gap-3 text-sm text-gray-500">
           <span className="block w-0.75 h-6 bg-orange-400" />
           <span>

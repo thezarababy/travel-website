@@ -7,7 +7,7 @@ import RecentPostCard from "@/components/reuseable/RecentPost-card";
 
 const Home = () => {
   return (
-    <div id="home" className="">
+    <div id="home" className=" ">
       <Header
         bgImg="/homeBG.png"
         text={
@@ -26,7 +26,7 @@ const Home = () => {
           absolute
           left-1/2
           -translate-x-1/2
-          bottom-60
+          bottom-20
           flex
           flex-col
           items-center
@@ -39,12 +39,10 @@ const Home = () => {
         <img src="/scroll.png" alt="Scroll" className="w-6 h-6" />
       </ScrollButton>
 
-      <main className=" mx-auto max-w-6xl px-4 py-12 flex flex-col gap-12 lg:flex-row lg:gap-10 ">
-        <section className="w-full lg:flex-[0.9] space-y-10">
+      <main className=" vw-[95%] mx-auto px-4 py-12 text-center flex justify-between  ">
+        <section className=" w-[30%]  ">
           <div
-            className=" flex flex-col items-center  w-[438.23px] h-150 shadow-[0_20px_40px_rgba(0,0,0,0.12)]
-transition-all duration-300 hover:-translate-y-1
-hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
+            className=" flex flex-col items-center  w-[438.23px] h-150 "
             id="next-section"
           >
             <h1 className="font-bold text-2xl my-3 ">About us</h1>
@@ -247,12 +245,8 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) w-111.25 mb-8 ]"
             </section>
           </div>
         </section>
-        <section
-          className="w-full lg:flex-[1.1] space-y-10shadow-[0_20px_40px_rgba(0,0,0,0.12)]
-transition-all duration-300 hover:-translate-y-1
-hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
-        >
-          <div className="">
+        <section className="w-[70%] ">
+          <div className="mb-6  ">
             <DestinationCard
               image="/bus.png"
               title="Bali, Indonesia"
@@ -263,8 +257,8 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
               commentsCount={12}
             />
           </div>
-          <div className=" grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className=" w-125">
+          <div className=" flex md:flex gap-2 mb-6">
+            <div className=" w-120 ">
               <DestinationCard
                 image="/bus.png"
                 title="Bali, Indonesia"
@@ -275,7 +269,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
                 commentsCount={12}
               />
             </div>
-            <div className="w-125">
+            <div className="w-120 ">
               <DestinationCard
                 image="/bus.png"
                 title="Bali, Indonesia"
@@ -287,7 +281,7 @@ hover:shadow-[0_30px_60px_rgba(0,0,0,0.18) ]"
               />
             </div>
           </div>
-          <div className="">
+          <div className="mb-6">
             <DestinationCard
               image="/bus.png"
               title="Bali, Indonesia"
