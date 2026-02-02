@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navbar = () => {
   return (
     <div className=" absolute top-0  w-[80%] flex justify-between  items-center py-8">
       <div className="w-33 h-[55.67px]">
-        <img src="/logo.png" alt="Logo" />
+        <Image src="/logo.png" alt="Logo" width={133} height={56} />
       </div>
 
       <div className="flex gap-10 text-[#FFA500] ">

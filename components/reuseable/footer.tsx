@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <footer className=" mx-auto ">
@@ -5,7 +7,13 @@ const Footer = () => {
 
       <div className="max-w-[1260px] mx-auto px-5">
         <div className="flex justify-between items-center py-6 text-white">
-          <img src="/logo.png" alt="Logo" className="w-[133px] h-[55.67px]" />
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={133}
+            height={56}
+            className="w-[133px] h-[55.67px]"
+          />
           <p>Body</p>
           <p>Travel</p>
           <p>Account</p>
@@ -55,33 +63,19 @@ const Footer = () => {
       <hr className="border-t border-[#EEEEEE] " />
       <div className="  bg-[#000000AC]">
         <div className="max-w-[1260px] mx-auto px-5 py-5 text-white flex justify-between items-center">
-          <img
+          <Image
             src="/side-hustle.png"
             alt="side-hustle logo"
+            width={189}
+            height={60}
             className="w-[189px]"
           />
 
           <div className="flex items-center gap-8">
-            <img
-              src="/facebook.png"
-              alt="facebook"
-              className="w-[13px] h-[20px]"
-            />
-            <img
-              src="/twitter.png"
-              alt="twitter"
-              className="w-[21px] h-[17px]"
-            />
-            <img
-              src="/google.png"
-              alt="google"
-              className="w-[26.67px] h-[16.97px]"
-            />
-            <img
-              src="/linkedin.png"
-              alt="linkedin"
-              className="w-[18px] h-[19px]"
-            />
+            <Image src="/facebook.png" alt="facebook" width={13} height={20} />
+            <Image src="/twitter.png" alt="twitter" width={21} height={17} />
+            <Image src="/google.png" alt="google" width={27} height={17} />
+            <Image src="/linkedin.png" alt="linkedin" width={18} height={19} />
           </div>
 
           <p className="text-sm">

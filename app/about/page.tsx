@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div>
       <Header bgImg="/about.png" text="" title="About Us" button="" />
-      <main className=" mx-auto py-20">
-        <div className="flex gap-10  items-center w-360 mx-auto ">
+      <main className=" w-[90%] mx-auto py-20">
+        <div className="flex gap-8  items-center   ">
           <div>
             <p className="text-4xl">
               Hey, We are the{" "}
@@ -25,11 +25,11 @@ const About = () => {
             </p>
           </div>
         </div>
-        <section className="w-full h-full my-10">
+        <section className="w-full h-full my-10 px-4">
           <img src="/mountain.png" alt="" />
         </section>
         <section>
-          <p className="leading-10  mb-40">
+          <p className="leading-10  mb-40 px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis
             ut natoque imperdiet faucibus. Mi arcu, nunc imperdiet sit arcu id.
             In libero, nibh at malesuada nunc faucibus pulvinar dolor tellus.
@@ -134,13 +134,13 @@ const About = () => {
             </ul>
           </div>
         </article>
-        <section className="bg-gray-200 flex justify-between my-20 py-10 px-25">
+        <section className="bg-gray-200 flex justify-between my-20 px-25 py-10 ">
           <img src="/marshall.png" alt="" className="w-52 h-36" />
           <img src="/tesla.png" alt="" className="w-52 h-36" />
           <img src="/kitkat.png" alt="" className="w-52 h-36" />
           <img src="/boss.png" alt="" className="w-52 h-36" />
         </section>
-        <div className="flex justify-between mb-20    ">
+        <div className="flex justify-between mb-20 px-4   ">
           <div>
             <p className="text-4xl w-90 pt-10">
               What{" "}
@@ -159,7 +159,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <section className="grid grid-cols-1 md:grid-cols-3 w-360 mx-auto">
+        <section className="flex  md: flex-row justify-between ">
           <div className="w-90 h-100 shadow-2xl rounded-md px-8 py-10">
             <p className="leading-10 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis
@@ -191,14 +191,14 @@ const About = () => {
             <p>explorer</p>
           </div>
         </section>
-        <section className=" flex mt-30">
-          <img src="/one.png" alt="" className="w-52 h-65" />
-          <img src="/two.png" alt="" className="w-52 h-65" />
-          <img src="/three.png" alt="" className="w-52 h-65" />
-          <img src="/four.png" alt="" className="w-52 h-65" />
-          <img src="/five.png" alt="" className="w-52 h-65" />
-          <img src="/six.png" alt="" className="w-52 h-65" />
-          <img src="/seven.png" alt="" className="w-52 h-65" />
+        <section className=" flex mt-30 ">
+          <img src="/one.png" alt="" className="w-48 h-60" />
+          <img src="/two.png" alt="" className="w-48 h-60" />
+          <img src="/three.png" alt="" className="w-48 h-60" />
+          <img src="/four.png" alt="" className="w-48 h-60" />
+          <img src="/five.png" alt="" className="w-48 h-60" />
+          <img src="/six.png" alt="" className="w-48 h-60" />
+          <img src="/seven.png" alt="" className="w-48 h-60" />
         </section>
         <section className="flex justify-between my-30">
           <div>
@@ -207,7 +207,7 @@ const About = () => {
               Readers. Subscribe Today!
             </p>
           </div>
-          <form>
+          <form className="px-4">
             <input
               type="email"
               placeholder="Email Address"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
 
@@ -46,13 +47,13 @@ const Contact = () => {
           <Button label="Submit" />
         </form>
         <section className=" flex mt-30">
-          <img src="/one.png" alt="" className="w-52 h-65" />
-          <img src="/two.png" alt="" className="w-52 h-65" />
-          <img src="/three.png" alt="" className="w-52 h-65" />
-          <img src="/four.png" alt="" className="w-52 h-65" />
-          <img src="/five.png" alt="" className="w-52 h-65" />
-          <img src="/six.png" alt="" className="w-52 h-65" />
-          <img src="/seven.png" alt="" className="w-52 h-65" />
+          <Image src="/one.png" alt="" width={208} height={260} />
+          <Image src="/two.png" alt="" width={208} height={260} />
+          <Image src="/three.png" alt="" width={208} height={260} />
+          <Image src="/four.png" alt="" width={208} height={260} />
+          <Image src="/five.png" alt="" width={208} height={260} />
+          <Image src="/six.png" alt="" width={208} height={260} />
+          <Image src="/seven.png" alt="" width={208} height={260} />
         </section>
         <section className="flex justify-between my-30">
           <div>
