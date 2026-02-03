@@ -55,7 +55,7 @@ const TipsCard: React.FC<Props> = ({
             <span>({commentsCount})</span>
           </div>
           <div>
-            <Image src="/location.png" alt="location" width={16} height={16} />
+            <Image src="/star.png" alt="rating" width={16} height={16} />
             <span>{rates}</span>
           </div>
         </div>

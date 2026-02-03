@@ -32,14 +32,15 @@ const Tips = async () => {
           </div>
         </div>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-8">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
           {tips?.map((tip: any) => (
             <TipsCard
               key={tip._id}
+              image="/tip-placeholder.jpg"
               title={tip.title}
-              content={tip.content}
-              destinationTitle={tip.destination?.title}
-              destinationSlug={tip.destination?.slug?.current}
+              date={tip._createdAt}
+              exerpt={tip.content}
+              location={tip.destination?.title || "Unknown Location"}
             />
           ))}
         </section>
