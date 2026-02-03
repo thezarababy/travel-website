@@ -2,6 +2,7 @@ import Navbar from "@/components/reuseable/navbar";
 import Footer from "@/components/reuseable/footer";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import PortableText from "@/components/reuseable/portableText";
 import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -54,7 +55,7 @@ export default async function DestinationPage({ params }: destinationProps) {
         {destination.image && (
           <div className="mb-10">
             <Image
-              src={destination.image}
+              src={urlFor(destination.image).url()}
               alt={destination.title}
               width={1200}
               height={600}
@@ -68,6 +69,13 @@ export default async function DestinationPage({ params }: destinationProps) {
           <p>{destination.description}</p>
         </div>
 
+        {/* Content (Portable Text) */}
+        {destination.content && (
+          <section className="prose max-w-none mb-12">
+            <PortableText value={destination.content} />
+          </section>
+        )}
+
         {/* Gallery */}
         {destination.gallery?.length > 0 && (
           <section>
@@ -77,7 +85,7 @@ export default async function DestinationPage({ params }: destinationProps) {
               {destination.gallery.map((img: any, index: number) => (
                 <Image
                   key={index}
-                  src={img}
+                  src={urlFor(img).url()}
                   alt={`${destination.title} image ${index + 1}`}
                   width={400}
                   height={300}

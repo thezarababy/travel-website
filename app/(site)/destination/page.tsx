@@ -1,8 +1,24 @@
 import Image from "next/image";
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
+import DestinationCard from "@/components/reuseable/destination-card";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
-const page = () => {
+const page = async () => {
+  const query = `*[_type == "destination"] | order(publishedAt desc){
+    _id,
+    title,
+    excerpt,
+    slug,
+    publishedAt,
+    image,
+    continent,
+    commentCount
+  }`;
+
+  const destinations = await client.fetch(query);
+
   return (
     <div>
       <Header bgImg="/destination.png" text="" button="" title="Destination" />
@@ -18,10 +34,8 @@ const page = () => {
           </div>
           <div className="w-100">
             <p className=" leading-10">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mor
-              mattis nec etiam ac. Bibendum tellus mi imperdiet amet maecenas
-              magna tortor nulla. Nec tortor ut cursus ornare nibh vivamus. Quam
-              elementum at velit viverra mattis.{" "}
+              Discover curated destinations from our editors — curated
+              stories, galleries and travel details to inspire your next trip.
             </p>
           </div>
         </div>

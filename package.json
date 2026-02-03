@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.2.0",
+    "@portabletext/react": "^2.0.0",
     "@sanity/vision": "^4.22.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
