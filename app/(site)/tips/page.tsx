@@ -7,7 +7,8 @@ const Tips = async () => {
     _id,
     title,
     content,
-    destination->{title, slug}
+    destination->{title, slug},
+    _createdAt
   }`;
 
   const tips = await client.fetch(query);
@@ -15,8 +16,8 @@ const Tips = async () => {
   return (
     <div>
       <Header bgImg="/tips.png" text="" button="" title="Travel Tips" />
-      <main>
-        <div className="flex justify-between items-center w-360 mx-auto my-20">
+      <main className=" max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center w-[90%] mx-auto my-20">
           <div>
             <p className="text-6xl w-140 font-semibold">
               Maintaining your{" "}
@@ -24,10 +25,11 @@ const Tips = async () => {
               during travels.{" "}
             </p>
           </div>
-          <div className="w-150">
+          <div className="w-130">
             <p className=" leading-10">
               Helpful tips and practical advice to keep you safe and comfortable
-              while traveling.
+              while traveling. This includes information on health, local
+              customs, packing, and navigating new environments.
             </p>
           </div>
         </div>
@@ -38,9 +40,14 @@ const Tips = async () => {
               key={tip._id}
               image="/tip-placeholder.jpg"
               title={tip.title}
-              date={tip._createdAt}
+              date={new Date(tip._createdAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
               exerpt={tip.content}
               location={tip.destination?.title || "Unknown Location"}
+              slug={tip.destination?.slug?.current || ""}
             />
           ))}
         </section>
