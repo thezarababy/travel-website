@@ -1,17 +1,55 @@
 import Header from "@/components/reuseable/header";
-import { client } from "@/sanity/lib/client";
 import TipsCard from "@/components/reuseable/tips-card";
 
-const Tips = async () => {
-  const query = `*[_type == "tip"] | order(_createdAt desc){
-    _id,
-    title,
-    content,
-    destination->{title, slug},
-    _createdAt
-  }`;
+const Tips = () => {
 
-  const tips = await client.fetch(query);
+  const Tipcard = [
+    {
+      title: "Going to the Extreme\n-The Northern Pole",
+      image: "/d1.png",
+      comment: "25",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "15",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "10",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "35",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "19",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "5",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "20",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "28",
+    },
+    {
+      title: "Finding Love & Home In Tbilisi, Georgia",
+      image: "/d1.png",
+      comment: "16",
+    },
+  ];
 
   return (
     <div>
@@ -35,19 +73,18 @@ const Tips = async () => {
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
-          {tips?.map((tip: any) => (
+          {Tipcard.map((tipcard: any, idx: number) => (
             <TipsCard
-              key={tip._id}
-              image="/tip-placeholder.jpg"
-              title={tip.title}
-              date={new Date(tip._createdAt).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-              exerpt={tip.content}
-              location={tip.destination?.title || "Unknown Location"}
-              slug={tip.destination?.slug?.current || ""}
+              key={`tip-${idx}`}
+              image={tipcard.image}
+              title={tipcard.title}
+              date={"January 15, 2019"}
+              exerpt={""}
+              category={"Travel Tips"}
+              location={"North Pole"}
+              commentsCount={12}
+              rates={4.8}
+              slug={"finding-love-home-in-tbilisi-georgia"}
             />
           ))}
         </section>

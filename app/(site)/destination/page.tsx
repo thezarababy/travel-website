@@ -2,24 +2,8 @@ import Image from "next/image";
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
 import DestinationCard from "@/components/reuseable/destination-card";
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
-import { comment } from "postcss";
 
-const page = async () => {
-  const query = `*[_type == "destination"] | order(publishedAt desc){
-    _id,
-    title,
-    excerpt,
-    slug,
-    publishedAt,
-    image,
-    continent,
-    commentCount
-  }`;
-
-  const destinations = await client.fetch(query);
-
+const page = () => {
   const card = [
     {
       title: "Finding Love & Home In Tbilisi, Georgia",
@@ -91,7 +75,7 @@ const page = async () => {
         <section className="grid grid-cols-3 gap-8">
           {card.map((item, idx) => (
             <DestinationCard
-              key={idx}
+              key={`destination-${idx}`}
               image={item.image}
               title={item.title}
               date={"September 16,2018"}

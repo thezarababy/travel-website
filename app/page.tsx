@@ -240,46 +240,46 @@ hover:shadow-md"
               image="/bus.png"
               title="A traveler’s guide to Penang, Malaysia - Where to
 Eat, Drink, Sleep and Explore "
-              date="2024-05-15"
+              date="July 15,2021"
               exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
               category="Tips & Tricks"
-              location="Bali, Indonesia"
+              location="Penang, Malaysia"
               commentsCount={12}
             />
           </div>
           <div className=" flex md:flex gap-2 mb-6">
             <div className=" w-120 ">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/bus3.png"
+                title="Have you read The Beach by Alex?"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia "
+                commentsCount={18}
               />
             </div>
             <div className="w-120  ">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/city.png"
+                title="The writer actually live in Philippines"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={19}
               />
             </div>
           </div>
           <div className="mb-6">
             <DestinationCard
-              image="/bus.png"
-              title="Bali, Indonesia"
-              date="2024-05-15"
+              image="/wild.png"
+              title="Finding Love & home in Tbilisi, Georgia"
+              date="September 17, 2021"
               exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
               category="Tips & Tricks"
-              location="Bali, Indonesia"
-              commentsCount={12}
+              location="Penang, Malaysia "
+              commentsCount={20}
             />
           </div>
           <div
@@ -299,83 +299,83 @@ Eat, Drink, Sleep and Explore "
           <div className=" flex gap-4 mb-6">
             <div className=" w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/globe.png"
+                title="Get away from the maddening Crowds"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={40}
               />
             </div>
             <div className="w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/art.png"
+                title="Matsumoto Castle is considered one of"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={32}
               />
             </div>
           </div>
           <div className=" flex gap-4 mb-6">
             <div className=" w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/city2.png"
+                title="Many buildings especially in Japan"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={42}
               />
             </div>
             <div className="w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/kangaroo.png"
+                title="There are roughly 1200 semiwild deer "
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={32}
               />
             </div>
           </div>
           <div className="mb-6">
             <DestinationCard
-              image="/bus.png"
-              title="Bali, Indonesia"
-              date="2024-05-15"
+              image="/wild.png"
+              title="Finding Love & home in Tbilisi, Georgia"
+              date="September 17, 2021"
               exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
               category="Tips & Tricks"
-              location="Bali, Indonesia"
-              commentsCount={12}
+              location="Penang, Malaysia"
+              commentsCount={52}
             />
           </div>
           <div className=" flex gap-4">
             <div className=" w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/bus3.png"
+                title="Have you read The Beach by Alex?"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={42}
               />
             </div>
             <div className="w-125">
               <DestinationCard
-                image="/bus.png"
-                title="Bali, Indonesia"
-                date="2024-05-15"
+                image="/city.png"
+                title="The writer actually live in Philippines"
+                date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Bali, Indonesia"
-                commentsCount={12}
+                location="Georgia"
+                commentsCount={61}
               />
             </div>
           </div>

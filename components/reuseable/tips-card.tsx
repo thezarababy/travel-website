@@ -27,7 +27,7 @@ const TipsCard: React.FC<Props> = ({
 }) => {
   return (
     <Link href={`/tips/${slug}`}>
-      <article className="bg-white shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow">
+      <article className="bg-white  rounded-md shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow ">
         <div className="relative w-full h-70  overflow-hidden shrink-0">
           <Image src={image} alt={title} fill className="object-cover" />
         </div>
@@ -40,7 +40,7 @@ const TipsCard: React.FC<Props> = ({
             </span>
           </div>
 
-          <h3 className="text-2xl font-semibold bg-blue-500 text-white w-[80%] my-5 p-2">
+          <h3 className="text-2xl font-semibold bg-[#0336FF] text-white w-full my-5 p-2">
             {title}
           </h3>
 
