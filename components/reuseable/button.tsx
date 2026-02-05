@@ -1,14 +1,13 @@
 type ButtonProps = {
   label: string;
+  className?: string;
+  target: string;
   onClick?: () => void;
 };
 
-const Button = ({ label, onClick }: ButtonProps) => {
+const Button = ({ label, className, onClick }: ButtonProps) => {
   return (
-    <button
-      className="rounded-md px-10 py-5 text-white bg-[#0336FF] "
-      onClick={onClick}
-    >
+    <button onClick={onClick} className={className}>
       {label}
     </button>
   );

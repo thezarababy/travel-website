@@ -2,7 +2,6 @@ import Header from "@/components/reuseable/header";
 import TipsCard from "@/components/reuseable/tips-card";
 
 const Tips = () => {
-
   const Tipcard = [
     {
       title: "Going to the Extreme\n-The Northern Pole",
@@ -10,13 +9,13 @@ const Tips = () => {
       comment: "25",
     },
     {
-      title: "Finding Love & Home In Tbilisi, Georgia",
-      image: "/d1.png",
+      title: "Have you read the Beach by Alex?",
+      image: "/young-woman.png",
       comment: "15",
     },
     {
-      title: "Finding Love & Home In Tbilisi, Georgia",
-      image: "/d1.png",
+      title: "The writer actually\nlive in philippines",
+      image: "/blue-man.png",
       comment: "10",
     },
     {
@@ -52,8 +51,8 @@ const Tips = () => {
   ];
 
   return (
-    <div>
-      <Header bgImg="/tips.png" text="" button="" title="Travel Tips" />
+    <div id="destination">
+      <Header bgImg="/tips.png" text="" title="Travel Tips" />
       <main className=" max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center w-[90%] mx-auto my-20">
           <div>

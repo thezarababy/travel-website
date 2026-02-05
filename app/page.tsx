@@ -5,6 +5,7 @@ import ScrollButton from "@/components/reuseable/scroll-button";
 import Button from "@/components/reuseable/button";
 import PostCard from "@/components/reuseable/post-card";
 import RecentPostCard from "@/components/reuseable/RecentPost-card";
+import { Link } from "lucide-react";
 
 const Home = () => {
   return (
@@ -19,8 +20,15 @@ const Home = () => {
           </>
         }
         title="Leave your mark all over the world"
-        button="Read More"
       />
+
+      <Button
+        label="Read More"
+        className=" absolute left-1/2
+          -translate-x-1/2 bottom-40 rounded-md px-8 py-5 text-white bg-[#0336FF]"
+        target=""
+      />
+
       <ScrollButton
         target="next-section"
         className="
@@ -61,7 +69,12 @@ const Home = () => {
               lacus. Nulla amet suscipit sit lectus tortor. Dolor non eget
               suspendisse leo scelerisque sed d.
             </p>
-            <Button label="Read More" />
+            <Button
+              label="Read More"
+              className=" 
+           rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              target=""
+            />
           </div>
           <div className="  px-12 my-10 shadow-md">
             <h1 className="text-2xl font-bold text-center pt-6 pb-12">
@@ -143,7 +156,11 @@ const Home = () => {
               Unfortunately, there is no “one-size-fits-all” when it comes to
               travel packing lists.
             </p>
-            <Button label="View Details" />
+            <Button
+              label="View Details"
+              className="  rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              target=""
+            />
           </div>
 
           <div className="space-y-4 mb-8">

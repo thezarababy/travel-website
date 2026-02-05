@@ -4,7 +4,7 @@ import Button from "@/components/reuseable/button";
 const About = () => {
   return (
     <div>
-      <Header bgImg="/about.png" text="" title="About Us" button="" />
+      <Header bgImg="/about.png" text="" title="About Us" />
       <main className=" w-[90%] mx-auto py-20">
         <div className="flex gap-8  items-center   ">
           <div>
