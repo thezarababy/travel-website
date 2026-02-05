@@ -28,7 +28,7 @@ const TipsCard: React.FC<Props> = ({
   return (
     <Link href={`/tips/${slug}`}>
       <article className="bg-white  rounded-md shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow ">
-        <div className="relative w-full h-70  overflow-hidden shrink-0">
+        <div className="relative w-full h-70 rounded-t-md  overflow-hidden shrink-0">
           <Image src={image} alt={title} fill className="object-cover" />
         </div>
 
@@ -50,20 +50,15 @@ const TipsCard: React.FC<Props> = ({
 
           <div className="flex items-center justify-between text-sm text-gray-500 pt-2">
             <div className="flex items-center gap-2">
-              <Image
-                src="/location.png"
-                alt="location"
-                width={16}
-                height={16}
-              />
+              <Image src="/loc.png" alt="location" width={16} height={16} />
               <span>{location}</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <Image src="/comment.png" alt="comments" width={16} height={16} />
+              <Image src="/com.png" alt="comments" width={16} height={16} />
               <span>({commentsCount})</span>
             </div>
-            <div>
+            <div className="flex items-center gap-2">
               <Image src="/star.png" alt="rating" width={16} height={16} />
               <span>{rates}</span>
             </div>

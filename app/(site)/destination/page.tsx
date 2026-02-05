@@ -32,7 +32,7 @@ const page = () => {
     },
     {
       title: "Get away from the maddening crowds",
-      image: "/ bus4.png",
+      image: "/bus4.png",
       comment: "5",
     },
     {
@@ -42,7 +42,7 @@ const page = () => {
     },
     {
       title: "Many buildings especially in japan",
-      image: "building.png",
+      image: "/building.png",
       comment: "28",
     },
     {
@@ -54,7 +54,7 @@ const page = () => {
 
   return (
     <div>
-      <Header bgImg="/destination.png" text="" button="" title="Destination" />
+      <Header bgImg="/destination.png" text="" title="Destination" />
       <main className="py-10 max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center w-[80%] mx-auto my-20">
           <div>
@@ -110,7 +110,11 @@ const page = () => {
               className="w-83 h-20 border-2 p-4 mr-5"
             />
 
-            <Button label="Subscribe" />
+            <Button
+              label="Subscribe"
+              className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              target=""
+            />
           </form>
         </section>
       </main>

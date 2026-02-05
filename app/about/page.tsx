@@ -214,7 +214,11 @@ const About = () => {
               className="w-83 h-20 border-2 p-4 mr-5"
             />
 
-            <Button label="Subscribe" />
+            <Button
+              label="Subscribe"
+              className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              target=""
+            />
           </form>
         </section>
       </main>

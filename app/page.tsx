@@ -5,7 +5,6 @@ import ScrollButton from "@/components/reuseable/scroll-button";
 import Button from "@/components/reuseable/button";
 import PostCard from "@/components/reuseable/post-card";
 import RecentPostCard from "@/components/reuseable/RecentPost-card";
-import { Link } from "lucide-react";
 
 const Home = () => {
   return (
@@ -262,6 +261,7 @@ Eat, Drink, Sleep and Explore "
               category="Tips & Tricks"
               location="Penang, Malaysia"
               commentsCount={12}
+              slug="penang-malaysia"
             />
           </div>
           <div className=" flex md:flex gap-2 mb-6">
@@ -274,6 +274,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia "
                 commentsCount={18}
+                slug="beach-alex"
               />
             </div>
             <div className="w-120  ">
@@ -285,6 +286,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={19}
+                slug="writer-philippines"
               />
             </div>
           </div>
@@ -297,6 +299,7 @@ Eat, Drink, Sleep and Explore "
               category="Tips & Tricks"
               location="Penang, Malaysia "
               commentsCount={20}
+              slug="tbilisi-georgia"
             />
           </div>
           <div
@@ -310,7 +313,11 @@ Eat, Drink, Sleep and Explore "
                 something for you that isn't available in your country?
               </h1>
 
-              <Button label="Place Order " />
+              <Button
+                label="Place Order"
+                className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
+                target=""
+              />
             </div>
           </div>
           <div className=" flex gap-4 mb-6">
@@ -323,6 +330,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={40}
+                slug="maddening-crowds"
               />
             </div>
             <div className="w-125">
@@ -334,6 +342,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={32}
+                slug="matsumoto-castle"
               />
             </div>
           </div>
@@ -347,6 +356,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={42}
+                slug="buildings-japan"
               />
             </div>
             <div className="w-125">
@@ -358,6 +368,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={32}
+                slug="semiwild-deer"
               />
             </div>
           </div>
@@ -370,6 +381,7 @@ Eat, Drink, Sleep and Explore "
               category="Tips & Tricks"
               location="Penang, Malaysia"
               commentsCount={52}
+              slug="love-home-tbilisi"
             />
           </div>
           <div className=" flex gap-4">
@@ -382,6 +394,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={42}
+                slug="beach-alex-2"
               />
             </div>
             <div className="w-125">
@@ -393,6 +406,7 @@ Eat, Drink, Sleep and Explore "
                 category="Tips & Tricks"
                 location="Georgia"
                 commentsCount={61}
+                slug="writer-philippines-2"
               />
             </div>
           </div>

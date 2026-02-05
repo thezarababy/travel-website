@@ -5,8 +5,8 @@ import Button from "@/components/reuseable/button";
 const Contact = () => {
   return (
     <div>
-      <Header bgImg="/contact.png" text="" button="" title="Contact" />
-      <main className=" py-20">
+      <Header bgImg="/contact.png" text="" title="Contact" />
+      <main className=" py-10 max-w-7xl mx-auto px-6">
         <form
           action=" submit
       "
@@ -44,7 +44,11 @@ const Contact = () => {
             placeholder="message"
             className="underline border-2 p-5 h-100 w-214 mb-10 rounded-lg"
           />
-          <Button label="Submit" />
+          <Button
+            label="Submit"
+            className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
+            target=""
+          />
         </form>
         <section className=" flex mt-30">
           <Image src="/one.png" alt="" width={208} height={260} />
@@ -58,7 +62,7 @@ const Contact = () => {
         <section className="flex justify-between my-30">
           <div>
             <p className="font-bold text-4xl w-130">
-              Join <span className="text-blue-700">98,641</span> Monthly
+              Join <span className="text-blue-700 ">98,641</span> Monthly
               Readers. Subscribe Today!
             </p>
           </div>
@@ -68,9 +72,12 @@ const Contact = () => {
               placeholder="Email Address"
               className="w-83 h-20 border-2 p-4 mr-5"
             />
-            <div className="">
-              <Button label="Subscribe" />
-            </div>
+
+            <Button
+              label="Subscribe"
+              className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              target=""
+            />
           </form>
         </section>
       </main>
