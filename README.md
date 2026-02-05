@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Website
 
-## Getting Started
+A Next.js (App Router) travel website integrated with Sanity CMS for content management. Built with TypeScript, Tailwind CSS, and Sanity studio for editorial content.
 
-First, run the development server:
+## Features
+
+- Next.js App Router and server components
+- Sanity CMS integration (project: `db5nen6r` by default)
+- Tailwind CSS + PostCSS
+- TypeScript and ESLint
+- Reusable components for destinations, tips, and posts
+
+## Tech stack
+
+- Next.js
+- React
+- Sanity (CMS)
+- Tailwind CSS
+- Styled Components
+- TypeScript
+
+## Quick Start
+
+Prerequisites:
+
+- Node.js (v18 or newer recommended)
+- npm, pnpm, or yarn
+
+Setup and run locally:
 
 ```bash
+# install dependencies
+npm install
+
+# run the Next.js dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# build
+npm run build
+
+# start production server
+npm run start
+
+# lint
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sanity studio (in-project):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd sanity
+# if you have the CLI installed globally
+sanity start
+# or using npx
+npx sanity start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+The project reads Sanity settings from environment variables. Defaults are provided in `sanity/env.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` — Sanity project id (default: `db5nen6r`)
+- `NEXT_PUBLIC_SANITY_DATASET` — dataset name (default: `production`)
+- `NEXT_PUBLIC_SANITY_API_VERSION` — API version (default: `2026-01-19`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` at the repository root and set values when needed:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2026-01-19
+```
 
-## Deploy on Vercel
+## Project structure (high-level)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/` — Next.js App Router pages and layout
+- `components/` — UI components and reusable pieces
+- `lib/` — helper utilities
+- `public/` — static assets
+- `sanity/` — Sanity studio, schemas and studio config
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+- `npm run dev` — Start Next.js development server
+- `npm run build` — Build production assets
+- `npm run start` — Run the production server
+- `npm run lint` — Run ESLint
+
+## Deployment
+
+Recommended: deploy the Next.js app on Vercel. Configure the Sanity project and environment variables in the Vercel dashboard. If you deploy Sanity Studio separately, follow Sanity's hosting docs.
+
+## Contributing
+
+Contributions are welcome. Open an issue or submit a pull request with a clear description and tests/examples when applicable.
+
+## License
+
+This project does not include a license file. Add a `LICENSE` file (for example, MIT) if you want to make the project open source.
+
+---
+
+For more details about the codebase, open the `app/`, `components/`, and `sanity/` folders.
