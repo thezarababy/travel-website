@@ -162,9 +162,7 @@ const Home = () => {
           </div>
 
           <div className="space-y-4 mb-8">
-            <div
-              className="px-10 py-6 mb-10 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-            >
+            <div className="px-10 py-6 mb-10 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <h1 className="font-bold text-2xl">Product That I Have</h1>
             </div>
             <div className="shadow-md">
@@ -230,7 +228,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#E14D93] rounded-md p-4 justify-center">
                   <Image
-                    src="/instagram.ng"
+                    src="/instagram.png"
                     alt="instagram"
                     width={16}
                     height={16}
