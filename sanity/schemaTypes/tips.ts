@@ -11,7 +11,7 @@ export const tip = defineType({
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
-     defineField({
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -20,6 +20,20 @@ export const tip = defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: "excerpt",
+      title: "Excerpt",
+      type: "text",
+      rows: 3,
     }),
     defineField({
       name: "content",
@@ -31,6 +45,23 @@ export const tip = defineType({
       title: "Destination",
       type: "reference",
       to: [{ type: "destination" }],
+    }),
+    defineField({
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+    }),
+    defineField({
+      name: "rating",
+      title: "Rating",
+      type: "number",
+      validation: (Rule) => Rule.min(0).max(5),
+    }),
+    defineField({
+      name: "commentCount",
+      title: "Comment Count",
+      type: "number",
+      initialValue: 0,
     }),
   ],
 });

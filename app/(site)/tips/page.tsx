@@ -1,54 +1,38 @@
 import Header from "@/components/reuseable/header";
 import TipsCard from "@/components/reuseable/tips-card";
 
-const Tips = () => {
-  const Tipcard = [
-    {
-      title: "Going to the Extreme-The Northern Pole",
-      image: "/t1.png",
-      comment: "25",
-    },
-    {
-      title: "Summer Vibes... Where to spend the energy.",
-      image: "/t2.png",
-      comment: "15",
-    },
-    {
-      title: "Smartest cities and how to enjoy them.",
-      image: "/t3.png",
-      comment: "10",
-    },
-    {
-      title: "Going to the wild?\nWhat should you pack?",
-      image: "/t4.png",
-      comment: "35",
-    },
-    {
-      title: "Foods to try when you Visit Australia.",
-      image: "/t5.png",
-      comment: "19",
-    },
-    {
-      title: "Beaches And how to enjoy them the most.",
-      image: "/t6.png",
-      comment: "5",
-    },
-    {
-      title: "Road Trip 101 Things you need to know",
-      image: "/t7.png",
-      comment: "20",
-    },
-    {
-      title: "Water front precautions to take during travels.",
-      image: "/t8.png",
-      comment: "28",
-    },
-    {
-      title: "Going to the Extreme\n-The Northern Pole",
-      image: "/t9.png",
-      comment: "16",
-    },
-  ];
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import { groq } from "next-sanity";
+
+interface Tip {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  image: any;
+  publishedAt: string;
+  excerpt: string;
+  rating: number;
+  commentCount: number;
+  destination: { title: string };
+}
+
+const getTips = async (): Promise<Tip[]> => {
+  return client.fetch(groq`*[_type == "tip"]{
+    _id,
+    title,
+    slug,
+    image,
+    publishedAt,
+    excerpt,
+    rating,
+    commentCount,
+    destination->{title}
+  }`);
+};
+
+const Tips = async () => {
+  const tips = await getTips();
 
   return (
     <div id="destination">
@@ -72,19 +56,23 @@ const Tips = () => {
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-0 md:px-8 mb-20">
-          {Tipcard.map((tipcard: any, idx: number) => (
+          {tips.map((item) => (
             <TipsCard
-              key={`tip-${idx}`}
-              image={tipcard.image}
-              title={tipcard.title}
-              date={"January 15, 2019"}
-              exerpt={""}
-              category={"Travel Tips"}
-              location={"North Pole"}
-              commentsCount={12}
-              rates={4.8}
-              slug={"finding-love-home-in-tbilisi-georgia"}
-            />
+            key={item._id}
+            image={item.image ? urlFor(item.image).url() : ""}
+            title={item.title}
+            date={new Date(item.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+            exerpt={item.excerpt}
+            category={"Travel Tips"}
+            location={item.destination?.title || "Unknown"}
+            commentsCount={item.commentCount || 0}
+            rates={item.rating || 0}
+            slug={item.slug.current}
+          />
           ))}
         </section>
       </main>

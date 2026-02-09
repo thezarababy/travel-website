@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type DestinationCardProps = {
-  image: string;
+  image: string | null;
   title: string;
   date: string;
   exerpt: string;
@@ -26,8 +26,10 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   return (
     <Link href={`/destination/${slug}`}>
       <article className="bg-white shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow">
-        <div className="relative w-full h-70  overflow-hidden shrink-0">
-          <Image src={image} alt={title} fill className="object-cover" />
+        <div className="relative w-full h-70  overflow-hidden shrink-0 bg-gray-200">
+          {image && (
+            <Image src={image} alt={title} fill className="object-cover" />
+          )}
         </div>
 
         <div className=" h-60 px-4 pb-4 ">

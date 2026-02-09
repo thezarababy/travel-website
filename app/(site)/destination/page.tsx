@@ -3,54 +3,37 @@ import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
 import DestinationCard from "@/components/reuseable/destination-card";
 
-const page = () => {
-  const card = [
-    {
-      title: "Finding Love & Home In Tbilisi, Georgia",
-      image: "/d1.png",
-      comment: "25",
-    },
-    {
-      title: "Have you read the Beach by Alex?",
-      image: "/young-woman.png",
-      comment: "15",
-    },
-    {
-      title: "The writer actually live in philippines",
-      image: "/blue-man.png",
-      comment: "10",
-    },
-    {
-      title: "Honestly it’s almost ridiculous how",
-      image: "/man-bag.png",
-      comment: "35",
-    },
-    {
-      title: "The only way to see the islands",
-      image: "/view.png",
-      comment: "19",
-    },
-    {
-      title: "Get away from the maddening crowds",
-      image: "/bus4.png",
-      comment: "5",
-    },
-    {
-      title: "Matsumoto castle is considered one of",
-      image: "/bridge.png",
-      comment: "20",
-    },
-    {
-      title: "Many buildings especially in japan",
-      image: "/building.png",
-      comment: "28",
-    },
-    {
-      title: "There are roughly 1200 semiwild deer",
-      image: "/reindeer.png",
-      comment: "16",
-    },
-  ];
+import Link from "next/link";
+import { client } from "@/sanity/lib/client";
+import { groq } from "next-sanity";
+import DestinationList from "./DestinationList";
+
+interface Destination {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  image: any;
+  publishedAt: string;
+  excerpt: string;
+  commentCount: number;
+  continent: string;
+}
+
+const getDestinations = async (): Promise<Destination[]> => {
+  return client.fetch(groq`*[_type == "destination"]{
+    _id,
+    title,
+    slug,
+    image,
+    publishedAt,
+    excerpt,
+    commentCount,
+    continent
+  }`);
+};
+
+const Page = async () => {
+  const destinations = await getDestinations();
 
   return (
     <div>
@@ -72,21 +55,7 @@ const page = () => {
             </p>
           </div>
         </div>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {card.map((item, idx) => (
-            <DestinationCard
-              key={`destination-${idx}`}
-              image={item.image}
-              title={item.title}
-              date={"September 16,2018"}
-              exerpt={""}
-              category={"Tips & Trickss"}
-              location={"Georgia"}
-              commentsCount={parseInt(item.comment, 10) || 0}
-              slug={"finding-love-home-in-tbilisi-georgia"}
-            />
-          ))}
-        </section>
+        <DestinationList destinations={destinations} />
         <section className="flex flex-wrap justify-center gap-4 mt-30">
           <Image src="/one.png" alt="" width={208} height={260} />
           <Image src="/two.png" alt="" width={208} height={260} />
@@ -122,4 +91,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

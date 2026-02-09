@@ -29,7 +29,9 @@ const TipsCard: React.FC<Props> = ({
     <Link href={`/tips/${slug}`}>
       <article className="bg-white  rounded-md shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow ">
         <div className="relative w-full h-70 rounded-t-md  overflow-hidden shrink-0">
-          <Image src={image} alt={title} fill className="object-cover" />
+          {image && (
+            <Image src={image} alt={title} fill className="object-cover" />
+          )}
         </div>
 
         <div className=" h-60 px-4 pb-4 ">
