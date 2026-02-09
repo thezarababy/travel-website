@@ -1,7 +1,0 @@
-I have fixed the "hydation error" (<a> descendant of <a>) by removing the extra <Link> wrappers in:
-1. `app/(site)/destination/DestinationList.tsx`
-2. `app/(site)/tips/page.tsx`
-
-The `DestinationCard` and `TipsCard` components already handle the links internally, so the outer links were redundant and caused invalid HTML.
-
-You should now be able to view the pages without errors.
