@@ -24,7 +24,7 @@ const Home = () => {
       <Button
         label="Read More"
         className=" absolute left-1/2
-          -translate-x-1/2 bottom-40 rounded-md px-8 py-5 text-white bg-[#0336FF]"
+          -translate-x-1/2 bottom-35 rounded-md px-6 py-3  text-white bg-[#0336FF]"
         target=""
       />
 
@@ -47,10 +47,10 @@ const Home = () => {
         <Image src="/scroll.png" alt="Scroll" width={24} height={24} />
       </ScrollButton>
 
-      <main className="mx-10 px-4 py-12 text-center flex flex-col md:flex-row gap-10">
-        <section className="w-full md:w-[30%]">
+      <main className="max-w-7xl mx-auto px-4 py-12 text-center flex flex-col lg:flex-row gap-10">
+        <section className="w-full lg:w-[30%]">
           <div
-            className=" flex flex-col items-center gap-5 h-150 shadow-md "
+            className="flex flex-col items-center gap-5 shadow-md pb-10"
             id="next-section"
           >
             <h1 className="font-bold text-2xl my-3 ">About us</h1>
@@ -61,7 +61,7 @@ const Home = () => {
               height={200}
               className="object-cover "
             />
-            <p className="w-90.75  px-6 ">
+            <p className="w-full px-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum in
               vel massa donec sit. Mi ut risus sem malesuada ornare. Ac eu erat
               eget et lorem est arcu. Gravida hendrerit sit blandit semper
@@ -70,12 +70,11 @@ const Home = () => {
             </p>
             <Button
               label="Read More"
-              className=" 
-           rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
               target=""
             />
           </div>
-          <div className="  px-12 my-10 shadow-md">
+          <div className="px-6 md:px-12 my-10 shadow-md">
             <h1 className="text-2xl font-bold text-center pt-6 pb-12">
               Categories
             </h1>
@@ -108,8 +107,8 @@ const Home = () => {
               <p>(11)</p>
             </div>
           </div>
-          <div className="  mb-8">
-            <div className="px-10 py-6  mb-10 shadow-md">
+          <div className="mb-8">
+            <div className="px-10 py-6 mb-10 shadow-md">
               <h1 className="font-bold text-2xl">Popular Post</h1>
             </div>
             <div className="">
@@ -123,10 +122,10 @@ const Home = () => {
           </div>
 
           <div className="mb-8">
-            <div className="px-10 py-6  mb-10 shadow-md">
+            <div className="px-10 py-6 mb-10 shadow-md">
               <h1 className="font-bold text-2xl">Recent Posts</h1>
             </div>
-            <div className="  shadow-md ">
+            <div className="shadow-md">
               <RecentPostCard
                 image="/recent-post1.png"
                 title="Finding Love & home in Tbilisi, Georgia"
@@ -148,40 +147,36 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className=" shadow-md  h-70 text-center my-6 ">
-            <h1 className="font-bold pb-4 text-lg pt-6">Gear I Use</h1>
-            <h3 className="text-2xl font-bold  pb-4">What’s in My Bag??</h3>
-            <p className="pb-4 w-60 mx-auto text-[#0B0A0A]">
+          <div className="shadow-md py-6 text-center my-6">
+            <h1 className="font-bold pb-4 text-lg">Gear I Use</h1>
+            <h3 className="text-2xl font-bold pb-4">What’s in My Bag??</h3>
+            <p className="pb-4 w-full px-6 mx-auto text-[#0B0A0A]">
               Unfortunately, there is no “one-size-fits-all” when it comes to
               travel packing lists.
             </p>
             <Button
               label="View Details"
-              className="  rounded-md px-8 py-5 text-white bg-[#0336FF]"
+              className="rounded-md px-8 py-5 text-white bg-[#0336FF]"
               target=""
             />
           </div>
 
           <div className="space-y-4 mb-8">
             <div
-              className="px-10 py-6  mb-10 shadow-md
-transition-all duration-300 hover:-translate-y-1
-hover:shadow-md"
+              className="px-10 py-6 mb-10 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <h1 className="font-bold text-2xl">Product That I Have</h1>
             </div>
-            <div className=" shadow-md">
+            <div className="shadow-md">
               <RecentPostCard
-                image="/macbook
-            .png"
-                title="Apple MacBook Air  MJV2ELL/A 13-inch Laptop "
+                image="/macbook.png"
+                title="Apple MacBook Air MJV2ELL/A 13-inch Laptop"
                 price="$514"
                 date=""
               />
 
               <RecentPostCard
-                image="/phone
-            .png"
+                image="/phone.png"
                 title="Iphone Xs case, Iphone X case, SUPCASE"
                 price="$267"
                 date=""
@@ -195,16 +190,13 @@ hover:shadow-md"
             </div>
           </div>
           <div>
-            <div
-              className="px-10 py-6  mb-10 shadow-md
-  ]"
-            >
+            <div className="px-10 py-6 mb-10 shadow-md">
               <h1 className="font-bold text-2xl text-center">Get In Touch</h1>
             </div>
 
-            <section className="flex items-center gap-10 text-white text-sm">
-              <main className="">
-                <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4 mb-4">
+            <section className="flex flex-col xl:flex-row items-center justify-center gap-4 text-white text-sm">
+              <main className="w-full">
+                <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4 mb-4 justify-center">
                   <Image
                     src="/facebook.png"
                     alt="facebook"
@@ -214,7 +206,7 @@ hover:shadow-md"
                   <span>65.5K </span>
                   <span>Likes</span>
                 </div>
-                <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md p-4">
+                <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md p-4 mb-4 xl:mb-0 justify-center">
                   <Image
                     src="/youtube.png"
                     alt="youtube"
@@ -225,8 +217,8 @@ hover:shadow-md"
                   <span>Subscribers</span>
                 </div>
               </main>
-              <main>
-                <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md p-4 mb-4">
+              <main className="w-full">
+                <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md p-4 mb-4 justify-center">
                   <Image
                     src="/twitter.png"
                     alt="twitter"
@@ -236,7 +228,7 @@ hover:shadow-md"
                   <span>105 k</span>
                   <span>Followers</span>
                 </div>
-                <div className="flex items-center gap-2 bg-[#E14D93] rounded-md p-4">
+                <div className="flex items-center gap-2 bg-[#E14D93] rounded-md p-4 justify-center">
                   <Image
                     src="/instagram.ng"
                     alt="instagram"
@@ -250,12 +242,11 @@ hover:shadow-md"
             </section>
           </div>
         </section>
-        <section className="w-full md:w-[68%] ">
-          <div className="mb-6  ">
+        <section className="w-full lg:w-[68%]">
+          <div className="mb-6">
             <DestinationCard
               image="/bus.png"
-              title="A traveler’s guide to Penang, Malaysia - Where to
-Eat, Drink, Sleep and Explore "
+              title="A traveler’s guide to Penang, Malaysia - Where to Eat, Drink, Sleep and Explore"
               date="July 15,2021"
               exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
               category="Tips & Tricks"
@@ -264,20 +255,20 @@ Eat, Drink, Sleep and Explore "
               slug="penang-malaysia"
             />
           </div>
-          <div className=" flex md:flex gap-2 mb-6">
-            <div className=" w-120 ">
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="w-full">
               <DestinationCard
                 image="/bus3.png"
                 title="Have you read The Beach by Alex?"
                 date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
-                location="Georgia "
+                location="Georgia"
                 commentsCount={18}
                 slug="beach-alex"
               />
             </div>
-            <div className="w-120  ">
+            <div className="w-full">
               <DestinationCard
                 image="/city.png"
                 title="The writer actually live in Philippines"
@@ -297,7 +288,7 @@ Eat, Drink, Sleep and Explore "
               date="September 17, 2021"
               exerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra pharetra ac erat commodo non leo eget gravida viverra. Pharetra pharetra."
               category="Tips & Tricks"
-              location="Penang, Malaysia "
+              location="Penang, Malaysia"
               commentsCount={20}
               slug="tbilisi-georgia"
             />
@@ -320,8 +311,8 @@ Eat, Drink, Sleep and Explore "
               />
             </div>
           </div>
-          <div className=" flex gap-4 mb-6">
-            <div className=" w-125">
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="w-full">
               <DestinationCard
                 image="/globe.png"
                 title="Get away from the maddening Crowds"
@@ -333,7 +324,7 @@ Eat, Drink, Sleep and Explore "
                 slug="maddening-crowds"
               />
             </div>
-            <div className="w-125">
+            <div className="w-full">
               <DestinationCard
                 image="/art.png"
                 title="Matsumoto Castle is considered one of"
@@ -346,8 +337,8 @@ Eat, Drink, Sleep and Explore "
               />
             </div>
           </div>
-          <div className=" flex gap-4 mb-6">
-            <div className=" w-125">
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="w-full">
               <DestinationCard
                 image="/city2.png"
                 title="Many buildings especially in Japan"
@@ -359,10 +350,10 @@ Eat, Drink, Sleep and Explore "
                 slug="buildings-japan"
               />
             </div>
-            <div className="w-125">
+            <div className="w-full">
               <DestinationCard
                 image="/kangaroo.png"
-                title="There are roughly 1200 semiwild deer "
+                title="There are roughly 1200 semiwild deer"
                 date="September 17, 2021"
                 exerpt=""
                 category="Tips & Tricks"
@@ -384,8 +375,8 @@ Eat, Drink, Sleep and Explore "
               slug="love-home-tbilisi"
             />
           </div>
-          <div className=" flex gap-4">
-            <div className=" w-125">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="w-full">
               <DestinationCard
                 image="/bus3.png"
                 title="Have you read The Beach by Alex?"
@@ -397,7 +388,7 @@ Eat, Drink, Sleep and Explore "
                 slug="beach-alex-2"
               />
             </div>
-            <div className="w-125">
+            <div className="w-full">
               <DestinationCard
                 image="/city.png"
                 title="The writer actually live in Philippines"

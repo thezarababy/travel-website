@@ -2,21 +2,25 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className=" mx-auto ">
+    <footer className="  max-w-[1260px] mx-auto ">
       <hr className="border-t border-[#EEEEEE]" />
 
-      <div className="max-w-[1260px] mx-auto px-5">
-        <div className="flex justify-between items-center py-6 text-white">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={133}
-            height={56}
-            className="w-[133px] h-[55.67px]"
-          />
-          <p>Body</p>
-          <p>Travel</p>
-          <p>Account</p>
+      <div className="">
+        <div className=" flex gap-6 md:flex-row justify-between items-center py-6 text-white">
+          <div>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={133}
+              height={56}
+              className="w-[133px] h-[55.67px]"
+            />
+          </div>
+          <div className="">
+            <p>Body</p>
+            <p>Travel</p>
+            <p>Account</p>
+          </div>
         </div>
       </div>
 
