@@ -4,6 +4,12 @@ export const tip = defineType({
   name: "tip",
   title: "Travel Tip",
   type: "document",
+  groups: [
+    {
+      name: "media",
+      title: "Media",
+    },
+  ],
   fields: [
     defineField({
       name: "title",
@@ -25,6 +31,7 @@ export const tip = defineType({
       name: "image",
       title: "Image",
       type: "image",
+      group: "media",
       options: {
         hotspot: true,
       },

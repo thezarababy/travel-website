@@ -59,7 +59,7 @@ const Tips = async () => {
           {tips.map((item) => (
             <TipsCard
             key={item._id}
-            image={item.image ? urlFor(item.image).url() : ""}
+            image={item.image ? urlFor(item.image).url() : null}
             title={item.title}
             date={new Date(item.publishedAt).toLocaleDateString("en-US", {
               year: "numeric",

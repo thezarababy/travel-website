@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  image: string;
+  image: string | null;
   title: string;
   date: string;
   exerpt: string;
@@ -28,7 +28,7 @@ const TipsCard: React.FC<Props> = ({
   return (
     <Link href={`/tips/${slug}`}>
       <article className="bg-white  rounded-md shadow-md w-full h-full text-left cursor-pointer hover:shadow-lg transition-shadow ">
-        <div className="relative w-full h-70 rounded-t-md  overflow-hidden shrink-0">
+        <div className="relative w-full h-70 rounded-t-md  overflow-hidden shrink-0 bg-gray-200">
           {image && (
             <Image src={image} alt={title} fill className="object-cover" />
           )}
