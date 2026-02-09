@@ -6,17 +6,17 @@ const Footer = () => {
       <hr className="border-t border-[#EEEEEE]" />
 
       <div className="">
-        <div className=" flex gap-6 md:flex-row justify-between items-center py-6 text-white">
+        <div className=" flex gap-6 md:flex-row justify-between items-center py-6 mx-auto w-[90%]">
           <div>
             <Image
               src="/logo.png"
               alt="Logo"
               width={133}
               height={56}
-              className="w-[133px] h-[55.67px]"
+              className="w-32 h-[55.67px]"
             />
           </div>
-          <div className="">
+          <div className="flex items-center gap-8">
             <p>Body</p>
             <p>Travel</p>
             <p>Account</p>

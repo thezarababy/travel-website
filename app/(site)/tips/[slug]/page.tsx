@@ -1,4 +1,5 @@
 import Navbar from "@/components/reuseable/navbar";
+import Header from "@/components/reuseable/header";
 import Footer from "@/components/reuseable/footer";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -17,83 +18,40 @@ export const metadata: Metadata = {
   title: "Destinations - Travel Website",
   description: "Explore our exciting travel destinations around the world.",
 };
-export default async function DestinationPage({ params }: destinationProps) {
+export default async function TipsPage({ params }: destinationProps) {
   const { slug } = params;
-  // Fetch destination data based on slug
-  const query = `*[_type == "destination" && slug.current == $slug][0]{
+  // Fetch tip data based on slug
+  const query = `*[_type == "tip" && slug.current == $slug][0]{
     _id,
- title,
-    excerpt,
+    title,
     content,
-    continent,
-    description,
-    image,
-    gallery,
-    publishedAt,
-    commentCount,
-    seo {
-      metaTitle,
-      metaDescription,
-      keywords
+    destination->{
+      title,
+      slug
     }
   }`;
-  const destination = await client.fetch(query, { slug });
-  if (!destination) {
+
+  const tip = await client.fetch(query, { slug });
+
+  if (!tip) {
     notFound();
   }
+
   return (
     <div>
       <Navbar />
       <main className="container mx-auto px-4 py-10">
-        {/* Title */}
-        <h1 className="text-4xl font-bold mb-4">{destination.title}</h1>
-
-        {/* Excerpt */}
-        <p className="text-lg text-gray-600 mb-8">{destination.excerpt}</p>
-
-        {/* Hero Image */}
-        {destination.image && (
-          <div className="mb-10">
-            <Image
-              src={urlFor(destination.image).url()}
-              alt={destination.title}
-              width={1200}
-              height={600}
-              className="rounded-lg object-cover"
-            />
-          </div>
-        )}
-
-        {/* Description */}
-        <div className="prose max-w-none mb-12">
-          <p>{destination.description}</p>
-        </div>
-
-        {/* Content (Portable Text) */}
-        {destination.content && (
-          <section className="prose max-w-none mb-12">
-            <PortableText value={destination.content} />
-          </section>
-        )}
-
-        {/* Gallery */}
-        {destination.gallery?.length > 0 && (
-          <section>
-            <h2 className="text-2xl font-semibold mb-6">Gallery</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {destination.gallery.map((img: any, index: number) => (
-                <Image
-                  key={index}
-                  src={urlFor(img).url()}
-                  alt={`${destination.title} image ${index + 1}`}
-                  width={400}
-                  height={300}
-                  className="rounded-lg object-cover"
-                />
-              ))}
+        <h1 className="text-4xl font-bold mb-4">{tip.title}</h1>
+        {tip.content && (
+            <div className="prose max-w-none mb-12">
+            <p className="whitespace-pre-wrap">{tip.content}</p>
             </div>
-          </section>
+        )}
+        {tip.destination && (
+            <div className="mt-8">
+                <h3 className="text-xl font-bold">Related Destination:</h3>
+                <p>{tip.destination.title}</p>
+            </div>
         )}
       </main>
       <Footer />

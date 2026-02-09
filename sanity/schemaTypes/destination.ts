@@ -33,7 +33,8 @@ export const destination = defineType({
       name: "content",
       title: "Content",
       description: "Main destination article",
-      type: "content",
+      type: "array",
+      of: [{ type: "block" }, { type: "image", options: { hotspot: true } }],
       validation: (Rule) => Rule.required(),
     },
 
