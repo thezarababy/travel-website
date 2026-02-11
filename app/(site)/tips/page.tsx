@@ -58,21 +58,21 @@ const Tips = async () => {
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-0 md:px-8 mb-20">
           {tips.map((item) => (
             <TipsCard
-            key={item._id}
-            image={item.image ? urlFor(item.image).url() : null}
-            title={item.title}
-            date={new Date(item.publishedAt).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-            exerpt={item.excerpt}
-            category={"Travel Tips"}
-            location={item.destination?.title || "Unknown"}
-            commentsCount={item.commentCount || 0}
-            rates={item.rating || 0}
-            slug={item.slug.current}
-          />
+              key={item._id}
+              image={item.image?.asset ? urlFor(item.image).url() : null}
+              title={item.title}
+              date={new Date(item.publishedAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+              exerpt={item.excerpt}
+              category={"Travel Tips"}
+              location={item.destination?.title || "Unknown"}
+              commentsCount={item.commentCount || 0}
+              rates={item.rating || 0}
+              slug={item.slug.current}
+            />
           ))}
         </section>
       </main>
