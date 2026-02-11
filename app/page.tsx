@@ -23,8 +23,8 @@ const Home = () => {
 
       <Button
         label="Read More"
-        className=" absolute left-1/2
-          -translate-x-1/2 bottom-35 rounded-md px-6 py-3  text-white bg-[#0336FF]"
+        className=" absolute left-45 md:left-1/2
+          -translate-x-1/2 bottom-60 rounded-md px-6 py-3  text-white bg-[#0336FF]"
         target=""
       />
 
@@ -32,16 +32,18 @@ const Home = () => {
         target="next-section"
         className="
           absolute
-          left-1/2
+          left-45
+         md:left-1/2
           -translate-x-1/2
-          bottom-20
+          md:bottom-20
+          bottom-40
           flex
           flex-col
           items-center
           gap-2
         "
       >
-        <p className="text-white font-medium text-2xl">
+        <p className="text-white font-medium text-lg md:text-2xl">
           Scroll Down to Continue
         </p>
         <Image src="/scroll.png" alt="Scroll" width={24} height={24} />
