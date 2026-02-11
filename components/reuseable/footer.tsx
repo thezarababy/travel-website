@@ -6,7 +6,7 @@ const Footer = () => {
       <hr className="border-t border-[#EEEEEE]" />
 
       <div className="">
-        <div className=" flex gap-6 md:flex-row justify-between items-center py-6 mx-auto w-[90%]">
+        <div className=" flex flex-col md:flex-row gap-6 justify-between items-center py-6 mx-auto w-[90%]">
           <div>
             <Image
               src="/logo.png"
@@ -25,8 +25,8 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-[#EEEEEE] bg-[#000000AC] ">
-        <div className="max-w-[1260px] mx-auto px-5 py-10 text-[#EEEEEE] leading-[27px] flex justify-between">
-          <div className="w-[337px] flex flex-col gap-6">
+        <div className="max-w-[1260px] mx-auto px-5 py-10 text-[#EEEEEE] leading-[27px] flex flex-col md:flex-row flex-wrap justify-between gap-10">
+          <div className="w-full md:w-[337px] flex flex-col gap-6">
             <p>
               We are location independent bloggers, digital influencers, small
               group tour organizers and world travelers with a serious passion
@@ -38,14 +38,14 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-[191px] space-y-2">
+          <div className="w-full md:w-[191px] space-y-2">
             <p>Add: 221B John hope Street, Lekki, Lagos, Nigeria.</p>
             <p>T: +234 706 507 8544</p>
             <p>E: info@redexplorers.com</p>
             <p>W: www.redexplorers.com</p>
           </div>
 
-          <div className="w-[153px] space-y-2">
+          <div className="w-full md:w-[153px] space-y-2">
             <p>My List</p>
             <p>My Request</p>
             <p>My Credit</p>
@@ -53,7 +53,7 @@ const Footer = () => {
             <p>Contact</p>
           </div>
 
-          <div className="w-[153px] space-y-2">
+          <div className="w-full md:w-[153px] space-y-2">
             <p>Travel</p>
             <p>Why Travel</p>
             <p>Become a Traveler</p>
@@ -66,7 +66,7 @@ const Footer = () => {
       {/* ===== BOTTOM BAR ===== */}
       <hr className="border-t border-[#EEEEEE] " />
       <div className="  bg-[#000000AC]">
-        <div className="max-w-[1260px] mx-auto px-5 py-5 text-white flex justify-between items-center">
+        <div className="max-w-[1260px] mx-auto px-5 py-5 text-white flex flex-col md:flex-row justify-between items-center gap-5">
           <Image
             src="/side-hustle.png"
             alt="side-hustle logo"
