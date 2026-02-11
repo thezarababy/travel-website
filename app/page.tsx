@@ -9,45 +9,47 @@ import RecentPostCard from "@/components/reuseable/RecentPost-card";
 const Home = () => {
   return (
     <div id="home" className=" ">
-      <Header
-        bgImg="/homeBG.png"
-        text={
-          <>
-            THE COUNTER:{" "}
-            <span className="text-[#FFA500] font-semibold">70</span> Countries •{" "}
-            <span className="text-[#FFA500] font-semibold">1036</span> Cities
-          </>
-        }
-        title="Leave your mark all over the world"
-      />
+      <div className="relative">
+        <Header
+          bgImg="/homeBG.png"
+          text={
+            <>
+              THE COUNTER:{" "}
+              <span className="text-[#FFA500] font-semibold">70</span> Countries
+              • <span className="text-[#FFA500] font-semibold">1036</span>{" "}
+              Cities
+            </>
+          }
+          title="Leave your mark all over the world"
+        />
 
-      <Button
-        label="Read More"
-        className=" absolute left-45 md:left-1/2
-          -translate-x-1/2 bottom-60 rounded-md px-6 py-3  text-white bg-[#0336FF]"
-        target=""
-      />
+        <Button
+          label="Read More"
+          className=" absolute left-1/2
+          -translate-x-1/2 bottom-50 md:bottom-40 rounded-md px-4 py-2  text-white bg-[#0336FF]"
+          target=""
+        />
 
-      <ScrollButton
-        target="next-section"
-        className="
+        <ScrollButton
+          target="next-section"
+          className="
           absolute
-          left-45
-         md:left-1/2
+          left-1/2
           -translate-x-1/2
           md:bottom-20
-          bottom-40
+          bottom-30
           flex
           flex-col
           items-center
           gap-2
         "
-      >
-        <p className="text-white font-medium text-lg md:text-2xl">
-          Scroll Down to Continue
-        </p>
-        <Image src="/scroll.png" alt="Scroll" width={24} height={24} />
-      </ScrollButton>
+        >
+          <p className="text-white font-medium text-lg md:text-2xl">
+            Scroll Down to Continue
+          </p>
+          <Image src="/scroll.png" alt="Scroll" width={24} height={24} />
+        </ScrollButton>
+      </div>
 
       <main className="max-w-7xl mx-auto px-4 py-12 text-center flex flex-col lg:flex-row gap-10">
         <section className="w-full lg:w-[30%]">
