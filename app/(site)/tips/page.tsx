@@ -40,13 +40,13 @@ const Tips = async () => {
       <main className=" max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto my-20 gap-10">
           <div>
-            <p className="text-4xl md:text-6xl w-full md:w-[600px] font-semibold">
+            <p className="text-4xl md:text-6xl w-full md:w-150 font-semibold">
               Maintaining your{" "}
               <span className="font-semibold text-[#FFA500]">privacy </span>{" "}
               during travels.{" "}
             </p>
           </div>
-          <div className="w-full md:w-[500px]">
+          <div className="w-full md:w-125">
             <p className=" leading-10">
               Helpful tips and practical advice to keep you safe and comfortable
               while traveling. This includes information on health, local
