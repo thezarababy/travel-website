@@ -1,5 +1,9 @@
+
 import Header from "@/components/reuseable/header";
 import TipsCard from "@/components/reuseable/tips-card";
+import tipsBG from "@/public/tipsBG.png";
+
+
 
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -36,7 +40,7 @@ const Tips = async () => {
 
   return (
     <div id="destination">
-      <Header bgImg="/tips.png" text="" title="Travel Tips" />
+      <Header bgImg={tipsBG} text="" title="Travel Tips" />
       <main className=" max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto my-20 gap-10">
           <div>

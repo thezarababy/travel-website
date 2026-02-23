@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Image from "@/components/reuseable/custom-image";
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
+import contact from "@/public/contact.png";
 
 const Contact = () => {
   return (
     <div>
-      <Header bgImg="/contact.png" text="" title="Contact" />
+      <Header bgImg={contact} text="" title="Contact" />
       <main className="py-10 max-w-7xl mx-auto px-6">
         <form
           action="submit"

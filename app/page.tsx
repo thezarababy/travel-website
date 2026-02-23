@@ -1,17 +1,19 @@
-import Image from "next/image";
+"use client";
+import homeBG from "@/public/homeBG.png";
 import DestinationCard from "@/components/reuseable/destination-card";
 import Header from "@/components/reuseable/header";
 import ScrollButton from "@/components/reuseable/scroll-button";
 import Button from "@/components/reuseable/button";
 import PostCard from "@/components/reuseable/post-card";
 import RecentPostCard from "@/components/reuseable/RecentPost-card";
+import CustomImage from "@/components/reuseable/custom-image";
 
 const Home = () => {
   return (
     <div id="home" className=" ">
       <div className="relative">
         <Header
-          bgImg="/homeBG.png"
+          bgImg={homeBG}
           text={
             <>
               THE COUNTER:{" "}
@@ -47,7 +49,7 @@ const Home = () => {
           <p className="text-white font-medium text-lg md:text-2xl">
             Scroll Down to Continue
           </p>
-          <Image src="/scroll.png" alt="Scroll" width={24} height={24} />
+          <CustomImage src="/scroll.png" alt="Scroll" width={24} height={24} />
         </ScrollButton>
       </div>
 
@@ -58,13 +60,13 @@ const Home = () => {
             id="next-section"
           >
             <h1 className="font-bold text-2xl my-3 ">About us</h1>
-            <Image
+            <CustomImage
               src="/profile-pics.png"
               alt="Profile"
               width={300}
               height={200}
               className="object-cover "
-              
+
             />
             <p className="w-full px-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum in
@@ -200,7 +202,7 @@ const Home = () => {
             <section className="flex flex-col xl:flex-row items-center justify-center gap-4 text-white text-sm">
               <main className="w-full">
                 <div className="flex items-center gap-2 bg-[#4056AC] rounded-md p-4 mb-4 justify-center">
-                  <Image
+                  <CustomImage
                     src="/facebook.png"
                     alt="facebook"
                     width={16}
@@ -210,7 +212,7 @@ const Home = () => {
                   <span>Likes</span>
                 </div>
                 <div className="flex items-center gap-2 bg-[#FE2C3C] rounded-md p-4 mb-4 xl:mb-0 justify-center">
-                  <Image
+                  <CustomImage
                     src="/youtube.png"
                     alt="youtube"
                     width={16}
@@ -222,7 +224,7 @@ const Home = () => {
               </main>
               <main className="w-full">
                 <div className="flex items-center gap-2 bg-[#60B7FE] rounded-md p-4 mb-4 justify-center">
-                  <Image
+                  <CustomImage
                     src="/twitter.png"
                     alt="twitter"
                     width={16}
@@ -232,7 +234,7 @@ const Home = () => {
                   <span>Followers</span>
                 </div>
                 <div className="flex items-center gap-2 bg-[#E14D93] rounded-md p-4 justify-center">
-                  <Image
+                  <CustomImage
                     src="/instagram.png"
                     alt="instagram"
                     width={16}

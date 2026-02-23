@@ -1,10 +1,20 @@
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
+import about from "@/public/about.png";
+import CustomImage from "@/components/reuseable/custom-image";
 
-const About = () => {
+import one from "@/public/one.png";
+import two from "@/public/two.png";
+import three from "@/public/three.png";
+import four from "@/public/four.png";
+import five from "@/public/five.png";
+import six from "@/public/six.png";
+import seven from "@/public/seven.png";
+
+const About = () => { 
   return (
     <div>
-      <Header bgImg="/about.png" text="" title="About Us" />
+      <Header bgImg={about} text="" title="About Us" />
       <main className=" w-[90%] mx-auto py-20">
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-between">
           <div>
@@ -198,13 +208,13 @@ const About = () => {
           </div>
         </section>
         <section className="flex flex-wrap justify-center gap-4 mt-30">
-          <img src="/one.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/two.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/three.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/four.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/five.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/six.png" alt="" className="w-48 h-60 object-cover" />
-          <img src="/seven.png" alt="" className="w-48 h-60 object-cover" />
+          <CustomImage src={one} alt="One" className="w-48 h-60 object-cover" />
+  <CustomImage src={two} alt="Two" className="w-48 h-60 object-cover" />
+  <CustomImage src={three} alt="Three" className="w-48 h-60 object-cover" />
+  <CustomImage src={four} alt="Four" className="w-48 h-60 object-cover" />
+  <CustomImage src={five} alt="Five" className="w-48 h-60 object-cover" />
+  <CustomImage src={six} alt="Six" className="w-48 h-60 object-cover" />
+  <CustomImage src={seven} alt="Seven" className="w-48 h-60 object-cover" />
         </section>
         <section className="flex flex-col lg:flex-row justify-between items-center my-30 gap-10 px-4">
           <div>

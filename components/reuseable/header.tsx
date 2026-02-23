@@ -1,9 +1,10 @@
 "use client";
-import Image from "next/image";
+import  { StaticImageData } from "next/image";
 import Navbar from "./navbar";
+import CustomImage from "@/components/reuseable/custom-image";
 
 type HeaderProps = {
-  bgImg: string;
+  bgImg: StaticImageData;
   title: string;
   text: React.ReactNode;
 };
@@ -14,20 +15,20 @@ const Header: React.FC<HeaderProps> = ({ bgImg, title, text }) => {
       className="relative w-full h-146.75 bg-cover bg-center flex items-center justify-center text-white "
      
     >
-       <Image
-        src={bgImg}
-        alt="Header background"
-        fill
-        priority
-        placeholder="blur"
-        sizes="100vw"
-        className="object-cover"
-      />
+       
+      <CustomImage
+  src={bgImg}
+  alt="Header background"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover"
+/>
 
       <Navbar />
-      <div className="text-center px-4 ">
+      <div className=" relative z-20 text-center px-4 ">
         <p className=" text-sm md:text-2xl mb-3">{text}</p>
-        <h1 className=" text-3xl md:text-5xl  w-[80%] font-bold mb-3  leading-10 md:leading-15 mx-auto">
+        <h1 className=" text-3xl md:text-5xl  w-[80%] font-bold mb-3 leading-10 md:leading-15 mx-auto">
           {title}
         </h1>
       </div>

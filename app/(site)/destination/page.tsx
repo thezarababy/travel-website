@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from "@/components/reuseable/custom-image";
 import Header from "@/components/reuseable/header";
 import Button from "@/components/reuseable/button";
-import DestinationCard from "@/components/reuseable/destination-card";
+import destination from "@/public/destination.png";
 
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
@@ -37,7 +37,7 @@ const Page = async () => {
 
   return (
     <div>
-      <Header bgImg="/destination.png" text="" title="Destination" />
+      <Header bgImg={destination} text="" title="Destination" />
       <main className="py-10 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center w-[90%] md:w-[80%] mx-auto my-20 gap-10">
           <div>
