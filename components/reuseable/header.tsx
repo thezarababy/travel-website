@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = ({ bgImg, title, text }) => {
         alt="Header background"
         fill
         priority
+        placeholder="blur"
         sizes="100vw"
         className="object-cover"
       />
