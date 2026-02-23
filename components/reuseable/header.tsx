@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import Navbar from "./navbar";
 
 type HeaderProps = {
@@ -10,12 +12,17 @@ const Header: React.FC<HeaderProps> = ({ bgImg, title, text }) => {
   return (
     <header
       className="relative w-full h-146.75 bg-cover bg-center flex items-center justify-center text-white "
-      style={{
-        backgroundImage: `url(${bgImg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+     
     >
+       <Image
+        src={bgImg}
+        alt="Header background"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
       <Navbar />
       <div className="text-center px-4 ">
         <p className=" text-sm md:text-2xl mb-3">{text}</p>

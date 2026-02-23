@@ -64,6 +64,7 @@ const Home = () => {
               width={300}
               height={200}
               className="object-cover "
+              
             />
             <p className="w-full px-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum in
